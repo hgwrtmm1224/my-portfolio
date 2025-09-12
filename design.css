@@ -75,20 +75,20 @@ body {
 
 .table-container th,
 .table-container td {
-    border: 1px solid #60B2FE;
+    border: 1px solid #ff3df9;
     padding: 0.8rem;
     text-align: center;
     white-space: nowrap;
 }
 
 .table-container th {
-    background-color: #60B2FE;
+    background-color: #ff3df9;
     color: #fff;
     font-weight: bold;
 }
 
 .table-container tr:nth-child(even) {
-    background-color: #dceef5;
+    background-color: #ffffff;
 }
 
 @media (max-width: 480px) {
