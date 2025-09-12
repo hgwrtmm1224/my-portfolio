@@ -193,3 +193,64 @@ section {
   background: #dceef5; /* 偶数行に薄い水色をつける（見やすく） */
 }
 
+/* =========================
+   レスポンシブ対応
+   ========================= */
+
+/* タブレット・スマホ（横幅 768px 以下） */
+@media (max-width: 768px) {
+  nav {
+    position: relative;     /* 固定を解除 → 上に表示 */
+    width: 100%;            /* 横幅いっぱい */
+    height: auto;           /* 高さを自動調整 */
+    flex-direction: row;    /* 横並びに */
+    justify-content: space-between; /* タイトルとリンクを左右に配置 */
+    align-items: center;
+    padding: 1rem;          /* 少し余白を調整 */
+    box-shadow: none;       /* 影を消してスッキリ */
+  }
+
+  nav h1 {
+    font-size: 20px;
+    margin-bottom: 0;
+  }
+
+  nav a {
+    margin: 0 0.5rem;  /* 横にスペース */
+    font-size: 16px;
+  }
+
+  main {
+    margin-left: 0;   /* サイドバーの分の余白を消す */
+    padding: 1rem;
+  }
+
+  section {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+}
+
+/* スマホ（横幅 480px 以下） */
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;  /* ナビゲーションを縦並びに */
+    align-items: flex-start; /* 左寄せ */
+  }
+
+  nav a {
+    font-size: 14px;
+    margin: 0.4rem 0;
+  }
+
+  .rules,
+  .terms,
+  .skills {
+    grid-template-columns: 1fr; /* 1列表示にする */
+  }
+
+  .club-table th, .club-table td {
+    padding: 0.5rem;       /* セルを小さく */
+    font-size: 0.85rem;    /* 文字も少し小さく */
+  }
+}
