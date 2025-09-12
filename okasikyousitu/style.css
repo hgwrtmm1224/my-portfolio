@@ -1,0 +1,158 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1:wght@100..900&family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&family=Zen+Kurenaido&display=swap');
+
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  background-color: #fff0f6;
+  color: #333;
+}
+
+/* ロゴ部分のヘッダー */
+.header-logo {
+  position: relative;
+  background-image: url("image/名称未設定のデザイン (8).png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 60px 20px;
+  text-align: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.header-logo::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(164, 161, 161, 0.3);
+  z-index: -1;
+}
+
+/* ナビゲーション部分 */
+
+.header-nav {
+  background-color: #f8c8dc;
+  padding: 20px;
+  text-align: center;
+  font-family: 'Arial', sans-serif; /* ← 追加で統一 */
+}
+
+.header-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color:#ffffff;
+}
+
+.header-nav ul li {
+  display: inline-block;
+  margin: 0 15px;
+}
+
+.header-nav ul li a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: 'Arial', sans-serif; /* ← 追加で統一 */
+}
+
+.header-nav ul li a:hover {
+  color: #ffffff;
+  text-decoration: underline wavy 2px;
+}
+
+section {
+  padding: 40px 20px;
+  max-width: 800px;
+  margin: auto;
+   text-align: center;
+}
+
+#gallery img {
+  width: 200px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+footer {
+  background-color: #f8c8dc;
+  color: #fff;
+  text-align: center;
+  padding: 30px;
+}
+
+h2{
+   text-align: center;
+   font-size:30px;
+}
+
+h3{
+  font-size:25px;
+  border-bottom:3px solid #d838bb;
+  margin-bottom:20px;
+  letter-spacing:10px;
+  
+}
+
+form{
+  text-align: center;
+}
+
+
+    #result {
+      max-width: 500px;
+      margin: 30px auto;
+      padding: 20px;
+      background-color: #f0fff0;
+      border: 1px solid #90ee90;
+      border-radius: 10px;
+      display: none;
+    }
+
+h4{
+  text-align:center;
+}
+
+.wavy-link{
+  text-decoration: underline wavy #ffffff;
+}
+
+/* 2カラムレイアウト */
+.two-column {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  max-width: 1000px;
+  margin: 40px auto;
+  text-align: left;
+}
+
+.two-column .image {
+  flex: 1;
+}
+
+.two-column .image img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.two-column .text {
+  flex: 1;
+}
+
+/* スマホ対応 */
+@media (max-width: 768px) {
+  .two-column {
+    flex-direction: column;
+    text-align: center;
+  }
+}

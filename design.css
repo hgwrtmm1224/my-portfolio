@@ -1,0 +1,102 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1:wght@100..900&family=M+PLUS+1p&display=swap');
+
+       body {
+            /* フォントをArialか、もしなければ一般的なサンセリフ体にする */
+            font-family: "M PLUS 1", sans-serif;
+            /* ブラウザのデフォルトの余白をなくす */
+            margin: 0;
+            /* 全体の背景色を薄いグレーに設定する */
+            background-color: #f4f4f4;
+            /* テキストの色を濃いグレーに設定する */
+            color: #333;
+
+
+
+
+        }
+
+        .header {
+            /* ヘッダーの背景色をライトシーグリーンにする */
+            background-color: #ff368a;
+            /* ヘッダー内のテキストの色を白にする */
+            color: rgb(3, 3, 3);
+            /* ヘッダーの内側の余白を上下左右に1rem設定する */
+            padding: 1rem;
+            /* ヘッダー内のテキストを中央に揃える */
+            text-align: center;
+          
+        }
+
+        
+        
+
+        .nav {
+            /* ナビゲーションメニューの背景色を青にする */
+            background-color: rgb(244, 116, 206);
+            /* ナビゲーションメニュー内のテキストの色をグレーに設定する */
+            color: gray;
+            /* ナビゲーションメニュー内のテキストを中央に揃える */
+            text-align: center;
+            /* ナビゲーションメニューの内側の余白を上下に0.5rem設定する */
+            padding: 0.5rem;
+        }
+
+        .nav a {
+            /* ナビゲーションリンクのテキストの色を白にする */
+            color: rgb(0, 0, 0);
+            /* ナビゲーションリンクの下線を消す */
+            text-decoration: none;
+            /* ナビゲーションリンクの内側の余白を上下に0.5rem、左右に1rem設定する */
+            padding: 0.5rem 1rem;
+            /* ナビゲーションリンクをインラインブロック要素として扱い、幅や高さを設定できるようにする */
+            display: inline-block;
+        }
+
+
+        .nav a:hover {
+            /* ナビゲーションリンクにマウスが重なったときの背景色を濃いグレーにする */
+            background-color: #f7fcfc;
+        }
+
+        .container {
+            /* メインコンテンツの外側の余白を上下に0、左右に自動設定して中央に配置する */
+            margin: 0 auto;
+            /* メインコンテンツの内側の余白を上下左右に2rem設定する */
+            padding: 2rem;
+            /* メインコンテンツの最大幅を800pxに制限する */
+            max-width: 800px;
+        }
+
+        .main-content h2 {
+            /* h2要素の下に実線の黒い線を入れる */
+            border-bottom: 2px solid #333;
+            /* h2要素の下側の内側の余白を0.5rem設定する */
+            padding-bottom: 0.5rem;
+        }
+
+        /* レスポンシブデザインの調整 */
+        @media (max-width: 600px) {
+            .nav a {
+                /* 画面幅が600px以下の場合、ナビゲーションリンクをブロック要素（縦並び）にする */
+                display: block;
+                /* ナビゲーションリンクの内側の余白を上下左右に1rem設定する */
+                padding: 1rem;
+                /* ナビゲーションリンクの下側に細い線を入れる */
+                border-bottom: 1px solid #575757;
+            }
+        }
+    table {
+  border-collapse: collapse;
+  margin: 0 auto;
+  width: fit-content; /* 内容に合わせて幅を調整（任意） */
+  background-color: #fff; /* 背景を白にすると見やすくなる */
+}
+
+th, td {
+  border: 1px solid black;
+  white-space: nowrap;
+  padding: 10px; /* セル内の余白を追加すると見た目が整う */
+  text-align: center; /* 中央揃え（必要に応じて） */
+}

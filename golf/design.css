@@ -1,0 +1,195 @@
+@charset "utf-8";
+
+/* =========================
+   全体の設定
+   ========================= */
+body {
+  font-family: 'M PLUS Rounded 1c', sans-serif; /* サイト全体のフォントを指定 */
+  background: #F0FFFE;  /* 背景色：淡い水色で爽やかな印象 */
+  color: #333;          /* 標準文字色：濃いグレー */
+  margin: 0;            /* デフォルト余白を削除（余白なしに） */
+}
+
+/* =========================
+   サイドナビゲーション
+   ========================= */
+nav {
+  font-size: 20px;          /* サイドバー全体の基本文字サイズ */
+  position: fixed;          /* スクロールしても固定表示 */
+  top: 0;                   /* 上端に配置 */
+  left: 0;                  /* 左端に配置 */
+  width: 220px;             /* サイドバーの横幅 */
+  height: 100%;             /* 画面の高さと同じにする */
+  background: #007FFE;      /* 背景色：濃い青 */
+  color: white;             /* サイドバー内の文字色 */
+  padding: 1.5rem;          /* 内側の余白 */
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2); /* 右に影をつけて浮かせる */
+
+  display: flex;            /* 子要素を縦方向に並べるためflexbox使用 */
+  flex-direction: column;   /* 上から下に配置 */
+}
+
+.nav-bottom-text{
+  font-size:15px;
+}
+
+nav h1 {
+  font-size: 25px;   /* タイトルの文字サイズ */
+  margin-bottom: 2rem; /* タイトル下の余白 */
+}
+
+nav a {
+  display: block;         /* リンクをブロック化 → 縦並びに */
+  color: #eee;            /* リンク文字色（薄いグレー） */
+  margin: 0.8rem 0;       /* 上下に余白 */
+  text-decoration: none;  /* 下線を消す */
+  font-weight: bold;      /* 太字 */
+  transition: color 0.3s; /* マウスホバー時に色が変わるアニメーション */
+}
+
+nav a:hover {
+  color: #000000; /* マウスを乗せた時のリンク色：黒 */
+}
+
+/* =========================
+   メイン部分（ナビ右側）
+   ========================= */
+main {
+  margin-left: 240px;   /* サイドバーの幅分だけ右にずらす */
+  padding: 2rem;        /* 内側の余白 */
+  display: flex;        /* 子要素を並べるためflexbox使用 */
+  flex-direction: column; 
+  align-items: center;  /* 子要素を中央寄せ */
+}
+
+section {
+  background: #fff;      /* 白背景（カード風） */
+  margin: 0 auto 2rem auto; /* セクションを中央寄せ、下に余白 */
+  padding: 1.5rem;       /* 内側の余白 */
+  border-radius: 12px;   /* カードの角を丸める */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* ほんのり影で浮かせる */
+  max-width: 800px;      /* 最大幅を制限 */
+  width: 100%;           /* 幅いっぱいまで広がる */
+}
+
+/* =========================
+   ルールカード（初心者向けルール説明）
+   ========================= */
+.rules {
+  display: grid;         /* グリッドレイアウトで整列 */
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* カードを自動で調整して並べる */
+  gap: 1rem;             /* カード同士の間隔 */
+  margin-top: 1rem;      /* 上に余白 */
+}
+
+.rule {
+  background: #ffffff;   /* 白背景 */
+  border: 2px solid #b3e5fc; /* やさしい水色の枠線 */
+  padding: 1rem;         /* 内側の余白 */
+  border-radius: 12px;   /* 角丸 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 影で少し浮かせる */
+  transition: transform 0.2s; /* ホバー時アニメーション */
+}
+
+.rule:hover {
+  transform: translateY(-3px); /* ホバーで少し浮き上がる */
+}
+
+.rule h3 {
+  font-size: 1.1rem;     /* 見出しの文字サイズ */
+  margin-bottom: 0.5rem; /* 下に余白 */
+  color: #007FFE;        /* 青文字で強調 */
+}
+
+/* -------------------------
+   よく使う用語カード
+   ------------------------- */
+.terms {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.term {
+  background: #ffffff;
+  border: 2px solid #b3e5fc; /* 優しい水色の枠 */
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.term:hover {
+  transform: translateY(-3px);
+}
+
+.term h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #007FFE; /* 青文字で強調 */
+}
+
+
+
+/* =========================
+   クラブ説明カード
+   ========================= */
+.skills {
+  display: grid;         /* グリッドで並べる */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); /* 自動調整で並べる */
+  gap: 1rem;             /* 間隔 */
+}
+
+.skill {
+  background: #ffffff;   /* 白背景 */
+  border: 2px solid #b3e5fc; /* やさしい水色の枠線 */
+  padding: 1rem;         /* 内側の余白 */
+  border-radius: 12px;   /* 角丸 */
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 影で少し浮かせる */
+  transition: transform 0.2s; /* ホバー時アニメーション */
+}
+
+
+.skill:hover {
+  transform: translateY(-3px); /* ホバーで浮き上がる */
+}
+
+.skill h3 {
+  font-size: 1.1rem;     /* 見出しの文字サイズ */
+  margin-bottom: 0.5rem; /* 下に余白 */
+  color: #007FFE;        /* 青文字で強調 */
+}
+
+/* =========================
+   飛距離表（クラブ別）
+   ========================= */
+.club-table {
+  width: 100%;              /* 表を横幅いっぱいに */
+  border-collapse: separate;/* 通常の罫線（重ねない） */
+  border-spacing: 0;        /* セル間の余白なし */
+  border: 2px solid #60B2FE;/* 外枠を青で囲む */
+  border-radius: 12px;      /* 表全体を角丸に */
+  overflow: hidden;         /* はみ出し部分を非表示 */
+  margin-top: 1.5rem;       /* 上に余白 */
+  font-size: 0.95rem;       /* 文字サイズ */
+  background: #fff;         /* 背景白 */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05); /* 影で浮き上げ */
+}
+
+.club-table th, .club-table td {
+  border: 1px solid #60B2FE; /* 各セルの罫線 */
+  padding: 0.8rem;           /* セル内の余白 */
+  text-align: center;        /* 文字を中央寄せ */
+}
+
+.club-table th {
+  background: #60B2FE; /* ヘッダー行を青く */
+  color: #fff;         /* ヘッダー文字は白 */
+  font-weight: bold;   /* 太字 */
+}
+
+.club-table tr:nth-child(even) {
+  background: #dceef5; /* 偶数行に薄い水色をつける（見やすく） */
+}
+
