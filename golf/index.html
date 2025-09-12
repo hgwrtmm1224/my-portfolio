@@ -10,7 +10,7 @@
 </head>
 <body>
   <nav>
-    <img src="images/〇 (1).png" height="200px;" width="200px;">
+    <img src="images/iroiro.png" height="200px;" width="200px;">
     <h1>ゴルフのいろいろ</h1>
     <a href="#kikkake"> きっかけ</a>
     <a href="#rules"> 基本ルール</a>
@@ -24,7 +24,7 @@
   </nav>
 
   <main>
-    <section id="kikkake">
+    <section id="kikkake" class="kikkake-section">
       <h2> きっかけ</h2>
       <div class="kikkake">
         <p>営業先のお客様にコンペへお誘いいただいたことが、ゴルフを始めるきっかけでした。</p>
@@ -34,6 +34,7 @@
         ゴルフのルールやクラブの特徴、よく使う用語をまとめることで、同じ状況の方や自分の学びの記録にもなればと考えています。
   </div>
       </div>
+      <img src="images/cup.png" alt="クラブ" width="300">
     </section>
 
    <section id="rules">
@@ -129,7 +130,9 @@
 
     <section id="skills">
   <h2> クラブの種類</h2>
+  <img src="images/club.png" alt="クラブ" width="800">
   <div class="skills">
+    
     <div class="skill">
       <h3>ドライバー</h3>
       <p>ティーショットで使うクラブ。飛距離を出すために使用。方向性を安定させるのが課題。</p>
@@ -154,6 +157,7 @@
       <h3>パター</h3>
       <p>グリーン上でボールを転がすクラブ。力加減と方向性を意識して練習中。</p>
     </div>
+ 
   </div>
 
   <h2> クラブ別 平均飛距離（目安）</h2>
@@ -183,8 +187,16 @@
 </section>
 
 
-<section id="scores">
-      <h2> スコア記録</h2>
+<section id="scores" class="scores-section">
+  <div class="scores-header">
+    <!-- 左側：タイトル＋画像 -->
+    <div class="title-box">
+      <h2>スコア記録</h2>
+      <img src="images/cource.png" alt="コース" width="150">
+    </div>
+
+    <!-- 右側：フォーム＋記録 -->
+    <div class="record-box">
       <form id="scoreForm">
         <input type="date" id="date" required>
         <input type="text" id="course" placeholder="コース名" required>
@@ -193,7 +205,9 @@
       </form>
       <div class="scores" id="scoreList"></div>
       <div class="stats-box" id="stats">平均スコア: - ｜ ベスト: - ｜ ワースト: -</div>
-    </section>
+    </div>
+  </div>
+</section>
 
     
   </main>
@@ -248,6 +262,8 @@
     });
 
     render();
+
+    
   </script>
 </body>
 </html>
