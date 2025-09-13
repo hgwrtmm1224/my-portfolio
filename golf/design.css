@@ -287,3 +287,16 @@ section {
   height: auto;       /* 縦横比を維持 */
   display: block;     /* 中央揃えが効くようブロック表示 */
 }
+@media (max-width: 768px) {
+  .kikkake-section {
+    flex-direction: column-reverse; /* スマホでは画像→文章 */
+    align-items: center;
+    text-align: center;
+  }
+
+  .kikkake-section img {
+    max-width: 90%;  
+    height: auto;
+    margin-bottom: 1rem; /* 下に余白 */
+  }
+}
