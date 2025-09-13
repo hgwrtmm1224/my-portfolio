@@ -4,115 +4,109 @@
    全体の設定
    ========================= */
 body {
-  font-family: 'M PLUS Rounded 1c', sans-serif; /* サイト全体のフォント */
-  background: #F0FFFE;  /* 背景色：淡い水色で爽やか */
-  color: #333;          /* 文字色：濃いグレー */
-  margin: 0;            /* ブラウザデフォルトの余白を削除 */
-  /* ページ全体の基本スタイルをここで指定 */
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background: #F0FFFE;
+  color: #333;
+  margin: 0;
 }
 
 /* =========================
    サイドナビゲーション
    ========================= */
 nav {
-  font-size: 20px;           /* ナビゲーション文字の基本サイズ */
-  position: fixed;           /* スクロールしても固定表示 */
-  top: 0;                    /* 上端に配置 */
-  left: 0;                   /* 左端に配置 */
-  width: 220px;              /* サイドバーの横幅 */
-  height: 100%;              /* 画面の高さに合わせる */
-  background: #007FFE;       /* 濃い青の背景 */
-  color: white;              /* 文字色は白 */
-  padding: 1.5rem;           /* 内側余白 */
-  box-shadow: 4px 0 12px rgba(0,0,0,0.2); /* 右に影を付けて浮かせる */
-
-  display: flex;             /* flexboxで子要素を配置 */
-  flex-direction: column;    /* 上から下に並べる */
+  font-size: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 220px;
+  height: 100%;
+  background: #007FFE;
+  color: white;
+  padding: 1.5rem;
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
 }
 
-.nav-bottom-text{
-  font-size:15px; /* コピーライトなどの小文字表示 */
+.nav-bottom-text {
+  font-size: 15px;
 }
 
 nav h1 {
-  font-size: 25px;   /* ナビタイトル文字サイズ */
-  margin-bottom: 2rem; /* 下に余白 */
+  font-size: 25px;
+  margin-bottom: 2rem;
 }
 
 nav a {
-  display: block;         /* 縦並びにするためブロック化 */
-  color: #eee;            /* リンク文字色（薄いグレー） */
-  margin: 0.8rem 0;       /* 上下に余白 */
-  text-decoration: none;  /* 下線を消す */
-  font-weight: bold;      /* 太字にする */
-  transition: color 0.3s; /* ホバー時の色変化をアニメーション */
+  display: block;
+  color: #eee;
+  margin: 0.8rem 0;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
 }
 
 nav a:hover {
-  color: #000000; /* ホバー時に黒に変化 */
+  color: #000000;
 }
 
 /* =========================
    メイン部分（ナビ右側）
    ========================= */
 main {
-  margin-left: 240px;   /* サイドバー分を右にずらす */
-  padding: 2rem;        /* 内側余白 */
-  display: flex;        /* flexboxで縦方向に並べる */
+  margin-left: 240px;
+  padding: 2rem;
+  display: flex;
   flex-direction: column; 
-  align-items: center;  /* セクションを中央寄せ */
+  align-items: center;
 }
 
 section {
-  background: #fff;      /* 白背景カード風 */
-  margin: 0 auto 2rem auto; /* 中央寄せ＆下に余白 */
-  padding: 1.5rem;       /* 内側余白 */
-  border-radius: 12px;   /* 角を丸める */
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 影で浮き上げ */
-  max-width: 800px;      /* 最大幅 */
-  width: 100%;           /* 幅いっぱい */
+  background: #fff;
+  margin: 0 auto 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  max-width: 800px;
+  width: 100%;
 }
 
-/* きっかけセクション：文章と画像を左右配置 */
+/* きっかけセクション */
 .kikkake-section {
-  display: flex;                 /* 横並び */
-  justify-content: space-between; /* 左右に配置 */
-  align-items: flex-start;       /* 上揃え */
-  gap: 20px;                     /* 左右の間隔 */
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-/* =========================
-   ルールカード（初心者向けルール説明）
-   ========================= */
+/* ルールカード */
 .rules {
-  display: grid;                 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); /* 自動で列調整 */
-  gap: 1rem;                     
-  margin-top: 1rem;              
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
 }
 
 .rule {
-  background: #ffffff;           
-  border: 2px solid #b3e5fc;    /* 水色の枠線 */
-  padding: 1rem;                 
-  border-radius: 12px;           
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); /* 浮かせる影 */
-  transition: transform 0.2s;    /* ホバーアニメーション */
+  background: #ffffff;
+  border: 2px solid #b3e5fc;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
 
 .rule:hover {
-  transform: translateY(-3px);  /* 少し浮かせる */
+  transform: translateY(-3px);
 }
 
 .rule h3 {
-  font-size: 1.1rem;             
-  margin-bottom: 0.5rem;        
-  color: #007FFE;               /* 青文字で強調 */
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #007FFE;
 }
 
-/* =========================
-   よく使う用語カード
-   ========================= */
+/* 用語カード */
 .terms {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -122,7 +116,7 @@ section {
 
 .term {
   background: #ffffff;
-  border: 2px solid #b3e5fc; 
+  border: 2px solid #b3e5fc;
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
@@ -136,88 +130,89 @@ section {
 .term h3 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
-  color: #007FFE; 
+  color: #007FFE;
 }
 
-/* =========================
-   クラブ説明カード
-   ========================= */
+/* クラブカード */
 .skills {
-  display: grid;         
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); 
-  gap: 1rem;             
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
 }
 
 .skill {
-  background: #ffffff;   
-  border: 2px solid #b3e5fc; 
-  padding: 1rem;         
-  border-radius: 12px;   
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05); 
-  transition: transform 0.2s; 
+  background: #ffffff;
+  border: 2px solid #b3e5fc;
+  padding: 1rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
 }
 
 .skill:hover {
-  transform: translateY(-3px); 
+  transform: translateY(-3px);
 }
 
 .skill h3 {
-  font-size: 1.1rem;     
-  margin-bottom: 0.5rem; 
-  color: #007FFE;        
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #007FFE;
 }
 
-/* =========================
-   飛距離表（クラブ別）
-   ========================= */
+/* 飛距離表 */
 .club-table {
-  width: 100%;              
-  border-collapse: separate; 
-  border-spacing: 0;        
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
   border: 2px solid #60B2FE;
-  border-radius: 12px;      
-  overflow: hidden;         
-  margin-top: 1.5rem;       
-  font-size: 0.95rem;       
-  background: #fff;         
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05); 
+  border-radius: 12px;
+  overflow: hidden;
+  margin-top: 1.5rem;
+  font-size: 0.95rem;
+  background: #fff;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
 
 .club-table th, .club-table td {
-  border: 1px solid #60B2FE; 
-  padding: 0.8rem;           
-  text-align: center;        
+  border: 1px solid #60B2FE;
+  padding: 0.8rem;
+  text-align: center;
 }
 
 .club-table th {
-  background: #60B2FE; 
-  color: #fff;         
-  font-weight: bold;   
+  background: #60B2FE;
+  color: #fff;
+  font-weight: bold;
 }
 
 .club-table tr:nth-child(even) {
-  background: #dceef5; 
+  background: #dceef5;
 }
 
-/* =========================
-   スコア記録セクション（タイトルとフォーム）
-   ========================= */
+/* スコア記録 */
 .scores-header {
-  display: flex;                 /* 左右に分ける */
-  justify-content: space-between; 
-  align-items: flex-start;        
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
   gap: 30px;
 }
 
 .title-box {
-  display: flex;                 
-  flex-direction: column;        /* タイトルの下に画像 */
-  align-items: center;           
-  gap: 10px;                     /* タイトルと画像の間隔 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
 }
 
 .record-box {
-  flex: 1; /* 右側のフォーム・記録欄を広くする */
+  flex: 1;
+}
+
+/* タイトル下画像微調整 */
+.title-box img {
+  max-width: 150px;
+  height: auto;
+  display: block;
 }
 
 /* =========================
@@ -225,14 +220,14 @@ section {
    ========================= */
 @media (max-width: 768px) {
   nav {
-    position: relative;     
-    width: 100%;            
-    height: auto;           
-    flex-direction: row;    
-    justify-content: space-between; 
+    position: relative;
+    width: 100%;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
     align-items: center;
-    padding: 1rem;          
-    box-shadow: none;       
+    padding: 1rem;
+    box-shadow: none;
   }
 
   nav h1 {
@@ -241,12 +236,12 @@ section {
   }
 
   nav a {
-    margin: 0 0.5rem;  
+    margin: 0 0.5rem;
     font-size: 16px;
   }
 
   main {
-    margin-left: 0;   
+    margin-left: 0;
     padding: 1rem;
   }
 
@@ -254,12 +249,46 @@ section {
     padding: 1rem;
     margin-bottom: 1rem;
   }
+
+  /* きっかけセクション：文章→画像 */
+  .kikkake-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .kikkake-section img {
+    max-width: 90%;
+    height: auto;
+    margin-top: 1rem;
+    display: block;
+  }
+
+  /* skillsセクション画像をスマホ用に調整 */
+  #skills img {
+    max-width: 90%;
+    height: auto;
+    margin: 1rem auto;
+    display: block;
+  }
+
+  /* スコア記録：タイトルと画像は中央寄せ */
+  .title-box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .title-box img {
+    max-width: 120px;
+    height: auto;
+    margin: 0 auto;
+  }
 }
 
 @media (max-width: 480px) {
   nav {
-    flex-direction: column;  
-    align-items: flex-start; 
+    flex-direction: column;
+    align-items: flex-start;
   }
 
   nav a {
@@ -267,36 +296,16 @@ section {
     margin: 0.4rem 0;
   }
 
+  /* カード類を1列に */
   .rules,
   .terms,
   .skills {
-    grid-template-columns: 1fr; /* 1列表示 */
+    grid-template-columns: 1fr;
   }
 
+  /* クラブテーブルの文字・余白調整 */
   .club-table th, .club-table td {
-    padding: 0.5rem;       
-    font-size: 0.85rem;    
-  }
-}
-
-/* =========================
-   スコア記録：タイトル下の画像微調整
-   ========================= */
-.title-box img {
-  max-width: 150px;   /* 画像の最大幅 */
-  height: auto;       /* 縦横比を維持 */
-  display: block;     /* 中央揃えが効くようブロック表示 */
-}
-@media (max-width: 768px) {
-  .kikkake-section {
-    flex-direction: column-reverse; /* スマホでは画像→文章 */
-    align-items: center;
-    text-align: center;
-  }
-
-  .kikkake-section img {
-    max-width: 90%;  
-    height: auto;
-    margin-bottom: 1rem; /* 下に余白 */
+    padding: 0.5rem;
+    font-size: 0.85rem;
   }
 }
