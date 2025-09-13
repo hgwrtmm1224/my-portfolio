@@ -102,49 +102,44 @@ h4{
 }
 
 /* ==============================
-   フォーム縦並び＋ピンク系可愛いデザイン
+   フォームを縦並びに整列
 =============================== */
 form {
   max-width: 500px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 30px auto; /* 下に余白 */
   display: flex;
-  flex-direction: column;
-  gap: 20px;
-  background-color: #ffffff;
-  padding: 25px;
-  border-radius: 15px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex-direction: column; /* 縦並び */
+  gap: 15px; /* 項目間のスペース */
 }
 
 form label {
   font-weight: bold;
-  color: #d838bb;
-  margin-bottom: 5px;
 }
 
 form input,
 form select,
 form textarea {
   width: 100%;
-  padding: 10px 12px;
-  border-radius: 10px;
-  border: 1px solid #f596bd;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ffb5f8;
   box-sizing: border-box;
-  font-size: 16px;
-  transition: all 0.3s;
 }
 
-form input:focus,
-form select:focus,
-form textarea:focus {
-  border-color: #f55bb7;
-  box-shadow: 0 0 5px rgba(245, 91, 183, 0.5);
-  outline: none;
+#result {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #ffb5f8;
+  border-radius: 10px;
+  display: none;
 }
 
+/* 送信ボタンのデザイン */
 input[type="submit"] {
-  background-color: #f596bd;
-  color: white;
+  background-color: #f596bd;  /* ボタンの背景色 */
+  color: white;               /* 文字色 */
   font-weight: bold;
   padding: 12px;
   border: none;
@@ -155,21 +150,10 @@ input[type="submit"] {
 }
 
 input[type="submit"]:hover {
-  background-color: #fb9dd5;
+  background-color: #fb9dd5; /* ホバー時の色 */
   transform: scale(1.05);
 }
 
-#result {
-  max-width: 500px;
-  margin: 30px auto;
-  padding: 20px;
-  background-color: #ffffff;
-  border: 2px solid #f596bd;
-  border-radius: 15px;
-  display: none;
-  font-size: 16px;
-  color: #333;
-}
 
 /* 2カラムレイアウト */
 .two-column {
