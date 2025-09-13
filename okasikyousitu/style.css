@@ -167,7 +167,7 @@ body {
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: #ff6b6b; /* 目立つ色 */
+    background-color: #f596bd; /* 目立つ色 */
     color: white;
     border: none;
     outline: none;
@@ -182,7 +182,7 @@ body {
 }
 
 #backToTop:hover {
-    background-color: #e55050;
+    background-color: #f55bb7;
     transform: scale(1.1);
 }
 
