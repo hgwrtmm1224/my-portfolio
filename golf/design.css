@@ -61,6 +61,7 @@ main {
   box-sizing: border-box;
 }
 
+/* セクション共通 */
 section {
   background: #fff;
   margin: 0 auto 2rem auto;
@@ -71,12 +72,36 @@ section {
   width: 100%;
 }
 
-/* きっかけセクション */
+/* =========================
+   きっかけセクション
+========================= */
 .kikkake-section {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column; /* h2は上、内容は下 */
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+.kikkake-section h2 {
+  font-size: 1.8rem;
+  color: #000000;
+}
+
+/* h2下のテキスト＋画像を横並びにするラッパー */
+.kikkake-content {
+  display: flex;
+  flex-direction: row; /* PCは横並び */
   align-items: flex-start;
   gap: 20px;
+}
+
+.kikkake-text {
+  flex: 1;       /* テキスト部分は横幅いっぱい */
+}
+
+.kikkake-content img {
+  max-width: 300px;
+  height: auto;
 }
 
 /* =========================
@@ -163,17 +188,26 @@ section {
   nav a { margin: 0 0.5rem; font-size: 16px; }
 
   main {
-    margin-left: 0;      /* ここが重要 */
+    margin-left: 0;      /* 左余白解除 */
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
+    margin: 0 auto;      /* 中央揃え */
   }
 
   section { padding: 1rem; margin-bottom: 1rem; }
 
   /* きっかけセクション */
-  .kikkake-section { flex-direction: column; align-items: center; text-align: center; }
-  .kikkake-section img { max-width: 90%; height: auto; margin-top: 1rem; display: block; }
+  .kikkake-content {
+    flex-direction: column; /* スマホは縦並び */
+    align-items: center;
+    text-align: center;
+  }
+
+  .kikkake-content img {
+    max-width: 90%;
+    margin-top: 1rem;
+  }
 
   /* skills画像 */
   #skills img { max-width: 90%; height: auto; margin: 1rem auto; display: block; }
