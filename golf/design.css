@@ -309,3 +309,44 @@ section {
     font-size: 0.85rem;
   }
 }
+
+/* 横ズレ防止：常にスクロールバーを表示 */
+body {
+    overflow-y: scroll;
+}
+
+/* ページトップボタン */
+#backToTop {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 100;
+    background-color: #6bc9ff; /* 目立つ色 */
+    color: white;
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    display: block; /* 常に表示 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+#backToTop:hover {
+    background-color: #007FFE;
+    transform: scale(1.1);
+}
+
+/* 小さい画面でもサイズを調整 */
+@media (max-width: 480px) {
+    #backToTop {
+        width: 45px;
+        height: 45px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
