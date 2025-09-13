@@ -6,85 +6,90 @@
   <title>お菓子教室</title>
   <link rel="stylesheet" href="style.css">
   <link rel="stylesheet" href="backToTop.css">
-
-  
 </head>
 <body>
+  <!-- ヘッダー -->
   <header>
-     <header class="header-logo">
-  <img src="image/Sweet-removebg-preview.png" width="200px" alt="Sweet Smellsのロゴ">
-</header>
+    <div class="header-logo">
+      <img src="image/Sweet-removebg-preview.png" width="200" alt="Sweet Smellsのロゴ">
+    </div>
+    <nav class="header-nav">
+      <ul>
+        <li><a href="index.html">教室紹介</a></li>
+        <li><a href="index.html">ギャラリー</a></li>
+        <li><a href="lesson.html">レッスン</a></li>
+        <li><a href="contact.html">お問い合わせ</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<nav class="header-nav">
-  <ul>
-    <li><a href="index.html">教室紹介</a></li>
-    <li><a href="index.html">ギャラリー</a></li>
-    <li><a href="lesson.html">レッスン</a></li>
-    <li><a href="contact.html">お問い合わせ</a></li>
-  </ul>
-</nav>
-  
+  <!-- メインコンテンツ -->
+  <main>
+    <h2>お問い合わせ & 予約</h2>
 
-  <h2>お問い合わせ<br>
-    &<br>
-    予約
-  </h2>
+    <form id="reservationForm">
+      <label for="name">お名前：</label>
+      <input type="text" id="name" name="name" required>
 
+      <label for="email">メールアドレス：</label>
+      <input type="email" id="email" name="email" required>
+      <p>※ご予約完了後に確認のメールを送らせていただきます。</p>
 
-  <form id="reservationForm">
-    <label for="name">お名前：</label><br>
-    <input type="text" id="name" name="name" required><br><br>
+      <label for="course">受講コース：</label>
+      <select id="course" name="course" required>
+        <option value="">選択してください</option>
+        <option value="洋菓子">洋菓子</option>
+        <option value="和菓子">和菓子</option>
+        <option value="流行りのお菓子">流行りのお菓子</option>
+      </select>
 
-    <label for="email">メールアドレス：</label><br>
-    <input type="email" id="email" name="email" required><br>
-    ※ご予約完了後に確認のメールを送らせていただきます。<br><br>
+      <label for="date">希望日：</label>
+      <input type="date" id="date" name="date" required>
 
-    <label for="course">受講コース：</label><br>
-    <select id="course" name="course" required>
-      <option value="">選択してください</option>
-      <option value="洋菓子">洋菓子</option>
-      <option value="和菓子">和菓子</option>
-      <option value="流行りのお菓子">流行りのお菓子</option>
-    </select><br><br>
+      <label for="time">時間：</label>
+      <select id="time" name="time" required>
+        <option value="">選択してください</option>
+        <option value="10:00">10:00</option>
+        <option value="12:00">12:00</option>
+        <option value="14:00">14:00</option>
+      </select>
 
-    <label for="date">希望日：</label><br>
-    <input type="date" id="date" name="date" required><br><br>
+      <label for="people">人数：</label>
+      <select id="people" name="people" required>
+        <option value="">選択してください</option>
+        <option value="1">1人</option>
+        <option value="2">2人</option>
+        <option value="3">3人</option>
+        <option value="4">4人</option>
+      </select>
+      <p>※2人以上でご予約の際には、ご要望欄にお連れ様のお名前(姓のみ)のご入力をお願いします。</p>
 
-    <label for="time">時間：</label><br>
-    <select id="time" name="time" required>
-      <option value="">選択してください</option>
-      <option value="10:00">10:00</option>
-      <option value="12:00">12:00</option>
-      <option value="14:00">14:00</option>
-    </select><br><br>
+      <label for="message">ご要望など：</label>
+      <textarea id="message" name="message" rows="4"></textarea>
 
-    <label for="people">人数：</label><br>
-    <select id="people" name="people" required>
-      <option value="">選択してください</option>
-      <option value="1">1人</option>
-      <option value="2">2人</option>
-      <option value="3">3人</option>
-      <option value="4">4人</option>
-    </select><br>
-    ※2人以上でご予約の際には、<br>
-    ご要望欄にお連れ様のお名前(姓のみ)のご入力をお願いします。<br><br>
+      <input type="submit" value="予約する">
+    </form>
 
-    <label for="message">ご要望など：</label><br>
-    <textarea id="message" name="message" rows="4" cols="40"></textarea><br><br>
+    <div id="result" style="display:none;"></div>
 
-    <input type="submit" value="予約する">
-  </form>   <br>
+    <h4><a href="index.html">TOPに戻る</a></h4>
+  </main>
 
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 Sweet Smells</p>
+  </footer>
 
-  <div id="result"></div>
+  <!-- ページトップボタン -->
+  <button id="backToTop" title="トップへ戻る">↑</button>
 
-
+  <!-- JS -->
   <script>
     const form = document.getElementById("reservationForm");
     const resultDiv = document.getElementById("result");
 
     form.addEventListener("submit", function (e) {
-      e.preventDefault(); // ページ遷移防止
+      e.preventDefault();
 
       const name = document.getElementById("name").value;
       const email = document.getElementById("email").value;
@@ -104,19 +109,10 @@
         <p><strong>人数：</strong>${people}人</p>
         <p><strong>ご要望：</strong>${message || 'なし'}</p>
       `;
-
       resultDiv.style.display = "block";
     });
   </script>
-<h4>
-  <a href="index.html">TOPに戻る</a>
-</h4>
-</header>
-<!-- ページトップボタン -->
-<button id="backToTop" title="トップへ戻る">↑</button>
 
-<!-- 外部JSを読み込む -->
-<script src="backToTop.js"></script>
-
+  <script src="backToTop.js"></script>
 </body>
 </html>

@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1:wght@100..900&family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&family=Zen+Kurenaido&display=swap');
 
-
 body {
   font-family: 'Arial', sans-serif;
   line-height: 1.6;
@@ -10,6 +9,7 @@ body {
   padding: 0;
   background-color: #fff0f6;
   color: #333;
+  overflow-y: scroll; /* 横ズレ防止 */
 }
 
 /* ロゴ部分のヘッダー */
@@ -37,19 +37,16 @@ body {
 }
 
 /* ナビゲーション部分 */
-
 .header-nav {
   background-color: #f8c8dc;
   padding: 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif; /* ← 追加で統一 */
 }
 
 .header-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  color:#ffffff;
 }
 
 .header-nav ul li {
@@ -61,7 +58,6 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
-  font-family: 'Arial', sans-serif; /* ← 追加で統一 */
 }
 
 .header-nav ul li a:hover {
@@ -73,7 +69,7 @@ section {
   padding: 40px 20px;
   max-width: 800px;
   margin: auto;
-   text-align: center;
+  text-align: center;
 }
 
 #gallery img {
@@ -99,30 +95,80 @@ h3{
   border-bottom:3px solid #d838bb;
   margin-bottom:20px;
   letter-spacing:10px;
-  
 }
-
-form{
-  text-align: center;
-}
-
-
-    #result {
-      max-width: 500px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: #f0fff0;
-      border: 1px solid #90ee90;
-      border-radius: 10px;
-      display: none;
-    }
 
 h4{
   text-align:center;
 }
 
-.wavy-link{
-  text-decoration: underline wavy #ffffff;
+/* ==============================
+   フォーム縦並び＋ピンク系可愛いデザイン
+=============================== */
+form {
+  max-width: 500px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+form label {
+  font-weight: bold;
+  color: #d838bb;
+  margin-bottom: 5px;
+}
+
+form input,
+form select,
+form textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 10px;
+  border: 1px solid #f596bd;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: all 0.3s;
+}
+
+form input:focus,
+form select:focus,
+form textarea:focus {
+  border-color: #f55bb7;
+  box-shadow: 0 0 5px rgba(245, 91, 183, 0.5);
+  outline: none;
+}
+
+input[type="submit"] {
+  background-color: #f596bd;
+  color: white;
+  font-weight: bold;
+  padding: 12px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+  background-color: #fb9dd5;
+  transform: scale(1.05);
+}
+
+#result {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border: 2px solid #f596bd;
+  border-radius: 15px;
+  display: none;
+  font-size: 16px;
+  color: #333;
 }
 
 /* 2カラムレイアウト */
@@ -156,43 +202,38 @@ h4{
     text-align: center;
   }
 }
-/* 横ズレ防止：常にスクロールバーを表示 */
-body {
-    overflow-y: scroll;
-}
 
 /* ページトップボタン */
 #backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    background-color: #f596bd; /* 目立つ色 */
-    color: white;
-    border: none;
-    outline: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    display: block; /* 常に表示 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #f596bd;
+  color: white;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
 
 #backToTop:hover {
-    background-color: #f55bb7;
-    transform: scale(1.1);
+  background-color: #f55bb7;
+  transform: scale(1.1);
 }
 
-/* 小さい画面でもサイズを調整 */
 @media (max-width: 480px) {
-    #backToTop {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-        bottom: 15px;
-        right: 15px;
-    }
+  #backToTop {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
