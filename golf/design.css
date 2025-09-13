@@ -1,18 +1,20 @@
 @charset "utf-8";
 
 /* =========================
-   全体の設定
-   ========================= */
+   全体設定
+========================= */
 body {
   font-family: 'M PLUS Rounded 1c', sans-serif;
   background: #F0FFFE;
   color: #333;
   margin: 0;
+  overflow-y: scroll; /* 横ズレ防止 */
+  box-sizing: border-box;
 }
 
 /* =========================
    サイドナビゲーション
-   ========================= */
+========================= */
 nav {
   font-size: 20px;
   position: fixed;
@@ -28,9 +30,7 @@ nav {
   flex-direction: column;
 }
 
-.nav-bottom-text {
-  font-size: 15px;
-}
+.nav-bottom-text { font-size: 15px; }
 
 nav h1 {
   font-size: 25px;
@@ -46,19 +46,19 @@ nav a {
   transition: color 0.3s;
 }
 
-nav a:hover {
-  color: #000000;
-}
+nav a:hover { color: #000000; }
 
 /* =========================
-   メイン部分（ナビ右側）
-   ========================= */
+   メイン部分
+========================= */
 main {
-  margin-left: 240px;
+  margin-left: 240px;  /* PC用: サイドバー分 */
   padding: 2rem;
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
   align-items: center;
+  width: calc(100% - 240px);
+  box-sizing: border-box;
 }
 
 section {
@@ -79,16 +79,20 @@ section {
   gap: 20px;
 }
 
-/* ルールカード */
-.rules {
+/* =========================
+   ルール・用語・クラブカード
+========================= */
+.rules, .terms, .skills {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 1rem;
   margin-top: 1rem;
 }
 
-.rule {
-  background: #ffffff;
+.rules { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.terms, .skills { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
+
+.rule, .term, .skill {
+  background: #fff;
   border: 2px solid #b3e5fc;
   padding: 1rem;
   border-radius: 12px;
@@ -96,70 +100,13 @@ section {
   transition: transform 0.2s;
 }
 
-.rule:hover {
-  transform: translateY(-3px);
-}
+.rule:hover, .term:hover, .skill:hover { transform: translateY(-3px); }
 
-.rule h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #007FFE;
-}
+.rule h3, .term h3, .skill h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #007FFE; }
 
-/* 用語カード */
-.terms {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-  margin-top: 1rem;
-}
-
-.term {
-  background: #ffffff;
-  border: 2px solid #b3e5fc;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-
-.term:hover {
-  transform: translateY(-3px);
-}
-
-.term h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #007FFE;
-}
-
-/* クラブカード */
-.skills {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 1rem;
-}
-
-.skill {
-  background: #ffffff;
-  border: 2px solid #b3e5fc;
-  padding: 1rem;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-}
-
-.skill:hover {
-  transform: translateY(-3px);
-}
-
-.skill h3 {
-  font-size: 1.1rem;
-  margin-bottom: 0.5rem;
-  color: #007FFE;
-}
-
-/* 飛距離表 */
+/* =========================
+   飛距離表
+========================= */
 .club-table {
   width: 100%;
   border-collapse: separate;
@@ -179,17 +126,12 @@ section {
   text-align: center;
 }
 
-.club-table th {
-  background: #60B2FE;
-  color: #fff;
-  font-weight: bold;
-}
+.club-table th { background: #60B2FE; color: #fff; font-weight: bold; }
+.club-table tr:nth-child(even) { background: #dceef5; }
 
-.club-table tr:nth-child(even) {
-  background: #dceef5;
-}
-
-/* スコア記録 */
+/* =========================
+   スコア記録
+========================= */
 .scores-header {
   display: flex;
   justify-content: space-between;
@@ -197,27 +139,14 @@ section {
   gap: 30px;
 }
 
-.title-box {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 10px;
-}
+.title-box { display: flex; flex-direction: column; align-items: center; gap: 10px; }
+.record-box { flex: 1; }
 
-.record-box {
-  flex: 1;
-}
-
-/* タイトル下画像微調整 */
-.title-box img {
-  max-width: 150px;
-  height: auto;
-  display: block;
-}
+.title-box img { max-width: 150px; height: auto; display: block; }
 
 /* =========================
    レスポンシブ対応
-   ========================= */
+========================= */
 @media (max-width: 768px) {
   nav {
     position: relative;
@@ -230,123 +159,59 @@ section {
     box-shadow: none;
   }
 
-  nav h1 {
-    font-size: 20px;
-    margin-bottom: 0;
-  }
-
-  nav a {
-    margin: 0 0.5rem;
-    font-size: 16px;
-  }
+  nav h1 { font-size: 20px; margin-bottom: 0; }
+  nav a { margin: 0 0.5rem; font-size: 16px; }
 
   main {
-    margin-left: 0;
+    margin-left: 0;      /* ここが重要 */
+    width: 100%;
     padding: 1rem;
+    box-sizing: border-box;
   }
 
-  section {
-    padding: 1rem;
-    margin-bottom: 1rem;
-  }
+  section { padding: 1rem; margin-bottom: 1rem; }
 
-  /* きっかけセクション：文章→画像 */
-  .kikkake-section {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-  }
+  /* きっかけセクション */
+  .kikkake-section { flex-direction: column; align-items: center; text-align: center; }
+  .kikkake-section img { max-width: 90%; height: auto; margin-top: 1rem; display: block; }
 
-  .kikkake-section img {
-    max-width: 90%;
-    height: auto;
-    margin-top: 1rem;
-    display: block;
-  }
+  /* skills画像 */
+  #skills img { max-width: 90%; height: auto; margin: 1rem auto; display: block; }
 
-  /* skillsセクション画像をスマホ用に調整 */
-  #skills img {
-    max-width: 90%;
-    height: auto;
-    margin: 1rem auto;
-    display: block;
-  }
-
-  /* スコア記録：タイトルと画像は中央寄せ */
-  .title-box {
-    align-items: center;
-    text-align: center;
-  }
-
-  .title-box img {
-    max-width: 120px;
-    height: auto;
-    margin: 0 auto;
-  }
+  /* スコア記録タイトル画像 */
+  .title-box { align-items: center; text-align: center; }
+  .title-box img { max-width: 120px; margin: 0 auto; }
 }
 
 @media (max-width: 480px) {
-  nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+  nav { flex-direction: column; align-items: flex-start; }
+  nav a { font-size: 14px; margin: 0.4rem 0; }
+  .rules, .terms, .skills { grid-template-columns: 1fr; }
+  .club-table th, .club-table td { padding: 0.5rem; font-size: 0.85rem; }
 
-  nav a {
-    font-size: 14px;
-    margin: 0.4rem 0;
-  }
-
-  /* カード類を1列に */
-  .rules,
-  .terms,
-  .skills {
-    grid-template-columns: 1fr;
-  }
-
-  /* クラブテーブルの文字・余白調整 */
-  .club-table th, .club-table td {
-    padding: 0.5rem;
-    font-size: 0.85rem;
-  }
+  #backToTop { width: 45px; height: 45px; font-size: 20px; bottom: 15px; right: 15px; }
 }
 
-/* 横ズレ防止：常にスクロールバーを表示 */
-body {
-    overflow-y: scroll;
-}
-
-/* ページトップボタン */
+/* =========================
+   ページトップボタン
+========================= */
 #backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    background-color: #6bc9ff; /* 目立つ色 */
-    color: white;
-    border: none;
-    outline: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    display: block; /* 常に表示 */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #6bc9ff;
+  color: white;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
 }
 
-#backToTop:hover {
-    background-color: #007FFE;
-    transform: scale(1.1);
-}
-
-/* 小さい画面でもサイズを調整 */
-@media (max-width: 480px) {
-    #backToTop {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-        bottom: 15px;
-        right: 15px;
-    }
-}
+#backToTop:hover { background-color: #007FFE; transform: scale(1.1); }
