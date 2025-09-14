@@ -125,7 +125,8 @@ section {
   transition: transform 0.2s;
 }
 
-.rule:hover, .term:hover, .skill:hover { transform: translateY(-3px); }
+/* 動き削除 → 何も書かない */
+.rule:hover, .term:hover, .skill:hover {}
 
 .rule h3, .term h3, .skill h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #007FFE; }
 
@@ -245,7 +246,13 @@ section {
   font-size: 24px;
   display: block;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s;
+  transition: background-color 0.3s;
 }
 
-#backToTop:hover { background-color: #007FFE; transform: scale(1.1); }
+/* 背景色だけ変わる（scale削除済み） */
+#backToTop:hover { background-color: #007FFE; }
+
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* 横スクロール禁止 */
+}
