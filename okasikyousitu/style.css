@@ -239,3 +239,51 @@ footer {
     margin: 5px 0;
   }
 }
+
+/* ==============================
+   フォームの入力欄統一（テキスト・メール・日付・セレクト・テキストエリア）
+=============================== */
+form input[type="text"],
+form input[type="email"],
+form input[type="date"],
+form select,
+form textarea {
+    width: 100%;             /* 幅を親要素いっぱいに */
+    padding: 8px 10px;       /* 内側の余白 */
+    border-radius: 5px;      /* 角丸 */
+    border: 1px solid #ffb5f8;
+    box-sizing: border-box;   /* padding込みで幅を計算 */
+    font-size: 16px;
+    font-family: inherit;    /* フォントをフォームに合わせる */
+}
+
+/* 送信ボタンも幅を揃える */
+input[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    border-radius: 12px;
+    border: none;
+    background-color: #f596bd;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #fb9dd5;
+    transform: scale(1.05);
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+    form input[type="text"],
+    form input[type="email"],
+    form input[type="date"],
+    form select,
+    form textarea,
+    input[type="submit"] {
+        font-size: 14px;       /* 文字サイズを少し小さく */
+    }
+}
