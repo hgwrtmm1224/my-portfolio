@@ -221,3 +221,39 @@ input[type="submit"]:hover {
     right: 15px;
   }
 }
+
+/* メインコンテンツの余白と横スクロール防止 */
+main {
+    padding: 40px 20px;       /* 上下40px、左右20pxの余白 */
+    max-width: 800px;         /* 最大幅 */
+    margin: 0 auto;           /* 中央寄せ */
+    box-sizing: border-box;   /* paddingを幅に含める */
+    overflow-x: hidden;       /* 横スクロール防止 */
+}
+
+/* フォームの余白と幅調整 */
+form {
+    max-width: 500px;
+    width: 100%;
+    margin: 0 auto 30px auto; /* 下に余白、中央寄せ */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    box-sizing: border-box;   /* paddingを含める */
+}
+
+/* スマホ対応 */
+@media (max-width: 480px) {
+    main {
+        padding: 20px 15px;   /* スマホでは少し余白を減らす */
+    }
+
+    form {
+        width: 100%;          /* 幅を画面いっぱいに調整 */
+        margin-bottom: 20px;
+    }
+
+    #reservationForm p {
+        font-size: 0.9rem;    /* 注意書きや補足の文字を少し小さく */
+    }
+}
