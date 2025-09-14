@@ -5,19 +5,22 @@
 body {
     font-family: "M PLUS 1", sans-serif;
     margin: 0;
-    background-color: #f4f4f4;
+    background-color: #fff8ff;
     color: #333;
+    overflow-y: scroll; /* 横スクロール防止 */
+    max-width: 100%;
+    overflow-x: hidden; /* 横スクロール禁止 */
 }
 
 .header {
-    background-color: #ff368a;
+    background-color: #dea3fc;
     color: rgb(3, 3, 3);
     padding: 1rem;
     text-align: center;
 }
 
 .nav {
-    background-color: rgb(244, 116, 206);
+    background-color: rgb(246, 191, 251);
     color: gray;
     text-align: center;
     padding: 0.5rem;
@@ -28,10 +31,13 @@ body {
     text-decoration: none;
     padding: 0.5rem 1rem;
     display: inline-block;
+    transition: background-color 0.3s, border-radius 0.3s, box-shadow 0.3s; /* アニメーション追加 */
 }
 
 .nav a:hover {
     background-color: #f7fcfc;
+    border-radius: 8px; /* ちょっと丸く */
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* 軽い影 */
 }
 
 .container {
@@ -47,16 +53,18 @@ body {
 
 /* レスポンシブ ナビゲーション */
 @media (max-width: 600px) {
+    .nav {
+        padding: 0; /* 上下の隙間をなくす */
+    }
+
     .nav a {
         display: block;
         padding: 1rem;
-        border-bottom: 1px solid #575757;
+        border-bottom: 1px solid #aa00ff;
     }
 }
 
-/* =========================
-   レスポンシブ対応表
-   ========================= */
+/* レスポンシブ対応表 */
 .table-container {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
@@ -75,14 +83,14 @@ body {
 
 .table-container th,
 .table-container td {
-    border: 1px solid #ff3df9;
+    border: 1px solid #c300ff;
     padding: 0.8rem;
     text-align: center;
     white-space: nowrap;
 }
 
 .table-container th {
-    background-color: #ff3df9;
+    background-color: #d76dfe;
     color: #fff;
     font-weight: bold;
 }
@@ -103,10 +111,6 @@ body {
         font-size: 0.85rem;
     }
 }
-/* 横ズレ防止：常にスクロールバーを表示 */
-body {
-    overflow-y: scroll;
-}
 
 /* ページトップボタン */
 #backToTop {
@@ -114,7 +118,7 @@ body {
     bottom: 20px;
     right: 20px;
     z-index: 100;
-    background-color: #ff6b6b; /* 目立つ色 */
+    background-color: #df6bff;
     color: white;
     border: none;
     outline: none;
@@ -123,9 +127,9 @@ body {
     border-radius: 50%;
     cursor: pointer;
     font-size: 24px;
-    display: block; /* 常に表示 */
+    display: block;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s;
+    transition: transform 0.3s, background-color 0.3s;
 }
 
 #backToTop:hover {
@@ -133,7 +137,7 @@ body {
     transform: scale(1.1);
 }
 
-/* 小さい画面でもサイズを調整 */
+/* 小さい画面用 */
 @media (max-width: 480px) {
     #backToTop {
         width: 45px;
@@ -144,4 +148,40 @@ body {
     }
 }
 
+
+
+
+.flex-section {
+    display: flex;
+    justify-content: space-between; /* 左右に広げる */
+    align-items: flex-start;        /* 上揃え */
+    gap: 20px;
+    width: 100%;
+}
+
+.text-container {
+    flex: 1;
+    min-width: 0;                   /* 長文でも折り返し可能に */
+}
+
+.image-content img {
+    width: 200px;
+    height: auto;
+    flex-shrink: 0;       /* 画像は縮小しない */
+    border-radius: 8px;   /* 角を少しだけ丸く */
+}
+
+/* 画面幅が768px以下の場合は縦並びに */
+@media screen and (max-width: 768px) {
+    .flex-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .image-content img {
+        width: 150px;
+        margin-top: 15px;
+        border-radius: 8px; /* 小さい画像も同じ角丸 */
+    }
+}
 
