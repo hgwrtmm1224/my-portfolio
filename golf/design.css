@@ -125,8 +125,6 @@ section {
   transition: transform 0.2s;
 }
 
-/* 動き削除 → 何も書かない */
-.rule:hover, .term:hover, .skill:hover {}
 
 .rule h3, .term h3, .skill h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #007FFE; }
 
