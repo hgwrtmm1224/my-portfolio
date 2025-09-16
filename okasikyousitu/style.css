@@ -226,6 +226,7 @@ h4{
   box-sizing: border-box;
   font-size: 16px;
   font-family: 'Arial', sans-serif;
+  background-color: #ffffff; /* ← 背景白に変更 */
 }
 
 /* 高さ・縦中央調整 */
