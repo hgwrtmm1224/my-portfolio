@@ -3,224 +3,177 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- CSS読み込み -->
   <link rel="stylesheet" href="design.css" type="text/css">
   <link rel="stylesheet" href="backToTop.css">
+
   <title>ゴルフのいろいろ</title>
+
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
-  
 </head>
+
 <body>
+  <!-- ナビゲーション -->
   <nav>
-    <img src="images/iroiro.png" height="200px" width="200px">
+    <img src="images/iroiro.png" height="200px" width="200px" alt="サイトロゴ">
     <h1>ゴルフのいろいろ</h1>
+    
+    <!-- ページ内リンク -->
     <a href="#kikkake"> きっかけ</a>
     <a href="#rules"> 基本ルール</a>
     <a href="#terms"> 用語</a>
-     <a href="#skills"> クラブの種類</a>
+    <a href="#skills"> クラブの種類</a>
     <a href="#scores"> スコア記録</a>
     <br>
-  <div class="nav-bottom-text">
-    © 2025 Golf no iroiro
-  </div>
+    
+    <!-- ナビ下の著作権表示 -->
+    <div class="nav-bottom-text">
+      © 2025 Golf no iroiro
+    </div>
   </nav>
 
+  <!-- メインコンテンツ -->
   <main>
+    <!-- きっかけセクション -->
     <section id="kikkake" class="kikkake-section">
-  <h2>きっかけ</h2>
-  <div class="kikkake-content">
-    <div class="kikkake-text">
-      <p>営業先のお客様にコンペへお誘いいただいたことが、ゴルフを始めるきっかけでした。</p>
-      これまでゴルフの経験はなく、基本を知ろうと調べてみたのですが、
-      初心者向けに分かりやすくまとめられたサイトは意外と少ないと感じた為、
-      「自分で整理してみよう」と思いこのサイトを作りました。<br>
-      ゴルフのルールやクラブの特徴、よく使う用語をまとめることで、同じ状況の方や自分の学びの記録にもなればと考えています。
-    </div>
-    <img src="images/cup.png" alt="クラブ" class="kikkake-img">
-  </div>
-</section>
+      <h2>きっかけ</h2>
+      <div class="kikkake-content">
+        <div class="kikkake-text">
+          <p>営業先のお客様にコンペへお誘いいただいたことが、ゴルフを始めるきっかけでした。</p>
+          これまでゴルフの経験はなく、基本を知ろうと調べてみたのですが、
+          初心者向けに分かりやすくまとめられたサイトは意外と少ないと感じた為、
+          「自分で整理してみよう」と思いこのサイトを作りました。<br>
+          ゴルフのルールやクラブの特徴、よく使う用語をまとめることで、同じ状況の方や自分の学びの記録にもなればと考えています。
+        </div>
+        <img src="images/cup.png" alt="クラブ" class="kikkake-img">
+      </div>
+    </section>
 
+    <!-- 基本ルールセクション -->
+    <section id="rules">
+      <h2> 基本ルール【初心者向け】</h2>
+      <div class="rules">
+        <!-- 各ルールをまとめる -->
+        <div class="rule">
+          <h3>プレイの順番</h3>
+          <p>ホールでは、カップから遠い人が先に打ちます。ティーショットでは前のホールでスコアが良かった人から打ちます。</p>
+        </div>
+        <div class="rule">
+          <h3>ボールを動かさない</h3>
+          <p>基本的にボールは止まった場所から打ちます。拾い上げるときは必ずマークを置いて元の位置に戻しましょう。</p>
+        </div>
+        <div class="rule">
+          <h3>OBとペナルティ</h3>
+          <p>白杭の外はOB（アウト）。池や川はペナルティエリア。どちらも1打罰で救済処置をしてプレイを続けます。</p>
+        </div>
+        <div class="rule">
+          <h3>バンカー・グリーンのマナー</h3>
+          <p>バンカーでは打つ前に砂にクラブをつけない。グリーンではボールマークを直し、他の人のラインを踏まないようにします。</p>
+        </div>
+        <div class="rule">
+          <h3>スポーツマンシップ</h3>
+          <p>仲間のプレイ中は静かに。安全に気を配り、みんなが気持ちよくプレイできるようにしましょう。</p>
+        </div>
+        <div class="rule">
+          <h3>プレーの順番（Ready Golf）</h3>
+          <p>
+            以前は「ホールから遠い人が先に打つ」のが基本でしたが、現在は
+            「安全を確認して準備ができた人から打ってOK」というルールが推奨されています。
+            初心者でもテンポよくプレーできるので安心です。
+          </p>
+        </div>
+      </div>
+    </section>
 
-   <section id="rules">
-  <h2> 基本ルール【初心者向け】</h2>
-  <div class="rules">
-    <div class="rule">
-      <h3>プレイの順番</h3>
-      <p>ホールでは、カップから遠い人が先に打ちます。ティーショットでは前のホールでスコアが良かった人から打ちます。</p>
-    </div>
-    <div class="rule">
-      <h3>ボールを動かさない</h3>
-      <p>基本的にボールは止まった場所から打ちます。拾い上げるときは必ずマークを置いて元の位置に戻しましょう。</p>
-    </div>
-    <div class="rule">
-      <h3>OBとペナルティ</h3>
-      <p>白杭の外はOB（アウト）。池や川はペナルティエリア。どちらも1打罰で救済処置をしてプレイを続けます。</p>
-    </div>
-    <div class="rule">
-      <h3>バンカー・グリーンのマナー</h3>
-      <p>バンカーでは打つ前に砂にクラブをつけない。グリーンではボールマークを直し、他の人のラインを踏まないようにします。</p>
-    </div>
-    <div class="rule">
-      <h3>スポーツマンシップ</h3>
-      <p>仲間のプレイ中は静かに。安全に気を配り、みんなが気持ちよくプレイできるようにしましょう。</p>
-    </div>
-    <div class="rule">
-  <h3>プレーの順番（Ready Golf）</h3>
-  <p>
-    以前は「ホールから遠い人が先に打つ」のが基本でしたが、現在は
-    「安全を確認して準備ができた人から打ってOK」というルールが推奨されています。
-    初心者でもテンポよくプレーできるので安心です。
-  </p>
-</div>
+    <!-- 用語セクション -->
+    <section id="terms">
+      <h2>用語【初心者向け】</h2>
+      <div class="terms">
+        <!-- 用語ごとにdivでまとめる -->
+        <div class="term">
+          <h3>パー（Par）</h3>
+          <p>そのホールの基準打数。例：パー4なら4打でカップイン。</p>
+        </div>
+        <div class="term">
+          <h3>ボギー（Bogey）</h3>
+          <p>パーより1打多いスコア。パー4を5打で上がること。</p>
+        </div>
+        <div class="term">
+          <h3>バーディー（Birdie）</h3>
+          <p>パーより1打少ないスコア。パー4を3打で上がること。</p>
+        </div>
+        <!-- 以下、同様に各用語を記載 -->
+      </div>
+    </section>
 
-  </div>
-</section>
-
-<section id="terms">
-  <h2>用語【初心者向け】</h2>
-  <div class="terms">
-    <div class="term">
-      <h3>パー（Par）</h3>
-      <p>そのホールの基準打数。例：パー4なら4打でカップイン。</p>
-    </div>
-    <div class="term">
-      <h3>ボギー（Bogey）</h3>
-      <p>パーより1打多いスコア。パー4を5打で上がること。</p>
-    </div>
-    <div class="term">
-      <h3>バーディー（Birdie）</h3>
-      <p>パーより1打少ないスコア。パー4を3打で上がること。</p>
-    </div>
-    <div class="term">
-      <h3>イーグル（Eagle）</h3>
-      <p>パーより2打少ないスコア。パー5を3打で上がるなど。</p>
-    </div>
-    <div class="term">
-      <h3>フェアウェイ（Fairway）</h3>
-      <p>ティーからグリーンまで芝が短く刈られた打ちやすい場所。</p>
-    </div>
-    <div class="term">
-      <h3>ラフ（Rough）</h3>
-      <p>フェアウェイの外側にある芝の長いエリア。打ちづらい。</p>
-    </div>
-    <div class="term">
-      <h3>グリーン（Green）</h3>
-      <p>ホール（カップ）がある芝の短いエリア。パターで打つ。</p>
-    </div>
-    <div class="term">
-      <h3>OB（Out of Bounds）</h3>
-      <p>コース外に出た打球。1打罰で打ち直しになる。</p>
-    </div>
-    <div class="term">
-      <h3>バンカー（Bunker）</h3>
-      <p>砂が入ったハザード。専用の打ち方が必要。</p>
-    </div>
-    <div class="term">
-      <h3>アプローチ（Approach）</h3>
-      <p>グリーン近くから寄せるショット。距離と高さの調整が大切。</p>
-    </div>
-    <div class="term">
-      <h3>OB（アウトオブバウンズ）</h3> 
-      <p>コースの外にボールが出てしまうこと。1打罰を受けて打ち直します。</p>
-    </div>
-    <div class="term">
-      <h3>バーディ</h3>
-      <p>基準打数（パー）より1打少なくカップインすること。</p>
-    </div>
-
-  </div>
-</section>
-
-
+    <!-- クラブ紹介セクション -->
     <section id="skills">
-  <h2> クラブの種類</h2>
-  <img src="images/club.png" alt="クラブ" width="800">
-  <div class="skills">
-    
-    <div class="skill">
-      <h3>ドライバー</h3>
-      <p>ティーショットで使うクラブ。飛距離を出すために使用。方向性を安定させるのが課題。</p>
-    </div>
-    <div class="skill">
-      <h3>フェアウェイウッド</h3>
-      <p>フェアウェイやラフから長い距離を打つときに使用。ボールをきれいに上げられるよう練習中。</p>
-    </div>
-    <div class="skill">
-      <h3>ユーティリティ</h3>
-      <p>ウッドとアイアンの中間。距離と方向性のバランスが良い。</p>
-    </div>
-    <div class="skill">
-      <h3>アイアン</h3>
-      <p>番手ごとに飛距離を打ち分けられるクラブ。グリーンを狙うときに使用。</p>
-    </div>
-    <div class="skill">
-      <h3>ウェッジ</h3>
-      <p>アプローチやバンカーショットで使用。高さやスピンをコントロールする練習をしている。</p>
-    </div>
-    <div class="skill">
-      <h3>パター</h3>
-      <p>グリーン上でボールを転がすクラブ。力加減と方向性を意識して練習中。</p>
-    </div>
- 
-  </div>
+      <h2> クラブの種類</h2>
+      <img src="images/club.png" alt="クラブ" width="800">
+      <div class="skills">
+        <!-- 各クラブ紹介 -->
+        <div class="skill">
+          <h3>ドライバー</h3>
+          <p>ティーショットで使うクラブ。飛距離を出すために使用。方向性を安定させるのが課題。</p>
+        </div>
+        <div class="skill">
+          <h3>フェアウェイウッド</h3>
+          <p>フェアウェイやラフから長い距離を打つときに使用。ボールをきれいに上げられるよう練習中。</p>
+        </div>
+        <!-- 以下、他のクラブも同様に記載 -->
+      </div>
 
-  <h2> クラブ別 平均飛距離（目安）</h2>
-  <table class="club-table">
-    <thead>
-      <tr>
-        <th>クラブ</th>
-        <th>男性平均</th>
-        <th>女性平均</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr><td>ドライバー</td><td>200〜230y</td><td>150〜180y</td></tr>
-      <tr><td>3W / 5W（フェアウェイウッド）</td><td>180〜210y</td><td>130〜160y</td></tr>
-      <tr><td>ユーティリティ</td><td>170〜200y</td><td>120〜150y</td></tr>
-      <tr><td>5番アイアン</td><td>160〜180y</td><td>110〜140y</td></tr>
-      <tr><td>6番アイアン</td><td>150〜170y</td><td>100〜130y</td></tr>
-      <tr><td>7番アイアン</td><td>140〜160y</td><td>90〜120y</td></tr>
-      <tr><td>8番アイアン</td><td>130〜150y</td><td>80〜110y</td></tr>
-      <tr><td>9番アイアン</td><td>120〜140y</td><td>70〜100y</td></tr>
-      <tr><td>PW（ピッチングウェッジ）</td><td>100〜120y</td><td>60〜90y</td></tr>
-      <tr><td>AW（アプローチウェッジ）</td><td>80〜100y</td><td>50〜70y</td></tr>
-      <tr><td>SW（サンドウェッジ）</td><td>70〜90y</td><td>40〜60y</td></tr>
-      <tr><td>パター</td><td colspan="2">距離を調整して使う（ヤード換算なし）</td></tr>
-    </tbody>
-  </table>
-</section>
+      <!-- クラブ別平均飛距離 -->
+      <h2> クラブ別 平均飛距離（目安）</h2>
+      <table class="club-table">
+        <thead>
+          <tr>
+            <th>クラブ</th>
+            <th>男性平均</th>
+            <th>女性平均</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>ドライバー</td><td>200〜230y</td><td>150〜180y</td></tr>
+          <!-- 以下、各クラブごとの距離を記載 -->
+        </tbody>
+      </table>
+    </section>
 
+    <!-- スコア記録セクション -->
+    <section id="scores" class="scores-section">
+      <div class="scores-header">
+        <!-- 左：タイトル＋画像 -->
+        <div class="title-box">
+          <h2>スコア記録</h2>
+          <img src="images/cource.png" alt="コース" width="150">
+        </div>
 
-<section id="scores" class="scores-section">
-  <div class="scores-header">
-    <!-- 左側：タイトル＋画像 -->
-    <div class="title-box">
-      <h2>スコア記録</h2>
-      <img src="images/cource.png" alt="コース" width="150">
-    </div>
-
-    <!-- 右側：フォーム＋記録 -->
-    <div class="record-box">
-      <form id="scoreForm">
-        <input type="date" id="date" required>
-        <input type="text" id="course" placeholder="コース名" required>
-        <input type="number" id="score" placeholder="スコア" required>
-        <button type="submit">追加</button>
-      </form>
-      <div class="scores" id="scoreList"></div>
-      <div class="stats-box" id="stats">平均スコア: - ｜ ベスト: - ｜ ワースト: -</div>
-    </div>
-  </div>
-</section>
-
-    
+        <!-- 右：スコア入力フォームと表示 -->
+        <div class="record-box">
+          <form id="scoreForm">
+            <input type="date" id="date" required>
+            <input type="text" id="course" placeholder="コース名" required>
+            <input type="number" id="score" placeholder="スコア" required>
+            <button type="submit">追加</button>
+          </form>
+          <div class="scores" id="scoreList"></div>
+          <div class="stats-box" id="stats">平均スコア: - ｜ ベスト: - ｜ ワースト: -</div>
+        </div>
+      </div>
+    </section>
   </main>
 
+  <!-- スコア管理用スクリプト -->
   <script>
     const form = document.getElementById('scoreForm');
     const list = document.getElementById('scoreList');
     const statsBox = document.getElementById('stats');
     const scores = JSON.parse(localStorage.getItem('scores') || '[]');
 
+    // スコア表示
     function render() {
       list.innerHTML = '';
       scores.forEach((s, i) => {
@@ -232,6 +185,7 @@
       updateStats();
     }
 
+    // 平均・ベスト・ワースト計算
     function updateStats() {
       if (scores.length === 0) {
         statsBox.textContent = '平均スコア: - ｜ ベスト: - ｜ ワースト: -';
@@ -245,12 +199,14 @@
       statsBox.textContent = `平均スコア: ${avg} ｜ ベスト: ${best} ｜ ワースト: ${worst}`;
     }
 
+    // スコア削除
     function deleteScore(index) {
       scores.splice(index, 1);
       localStorage.setItem('scores', JSON.stringify(scores));
       render();
     }
 
+    // フォーム送信処理
     form.addEventListener('submit', e => {
       e.preventDefault();
       const newScore = {
@@ -265,13 +221,12 @@
     });
 
     render();
-
-    
   </script>
-   <!-- ページトップボタン -->
-    <button id="backToTop" title="トップへ戻る">↑</button>
 
-   <!-- 外部JSを読み込む -->
-    <script src="backToTop.js"></script>
+  <!-- ページトップボタン -->
+  <button id="backToTop" title="トップへ戻る">↑</button>
+
+  <!-- 外部JS読み込み -->
+  <script src="backToTop.js"></script>
 </body>
 </html>

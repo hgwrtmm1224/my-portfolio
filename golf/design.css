@@ -3,17 +3,19 @@
 /* =========================
    全体設定
 ========================= */
+/* ページ全体の基本スタイル */
 html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* 横スクロール禁止 */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  background: #F0FFFE;
-  color: #333;
+  max-width: 100%;             /* 横幅の最大値を画面幅に制限 */
+  overflow-x: hidden;          /* 横スクロール禁止 */
+  margin: 0;                   /* 余白リセット */
+  padding: 0;                  /* 余白リセット */
+  box-sizing: border-box;      /* パディング・ボーダー込みで幅計算 */
+  font-family: 'M PLUS Rounded 1c', sans-serif; /* 基本フォント */
+  background: #F0FFFE;         /* 背景色 */
+  color: #333;                 /* 文字色 */
 }
 
+/* 全要素にbox-sizing継承 */
 *, *::before, *::after {
   box-sizing: inherit;
 }
@@ -21,6 +23,7 @@ html, body {
 /* =========================
    サイドナビゲーション
 ========================= */
+/* 左固定ナビ */
 nav {
   font-size: 20px;
   position: fixed;
@@ -28,51 +31,51 @@ nav {
   left: 0;
   width: 220px;
   height: 100%;
-  background: #007FFE;
+  background: #007FFE;        /* ナビ背景色 */
   color: white;
   padding: 1.5rem;
-  box-shadow: 4px 0 12px rgba(0,0,0,0.2);
+  box-shadow: 4px 0 12px rgba(0,0,0,0.2); /* 影を付けて浮き上がらせる */
   display: flex;
   flex-direction: column;
 }
 
-.nav-bottom-text { font-size: 15px; }
+.nav-bottom-text { font-size: 15px; } /* 著作権表示などの小さめ文字 */
 
 nav h1 {
   font-size: 25px;
   margin-bottom: 2rem;
 }
 
+/* ナビリンク */
 nav a {
   display: block;
   color: #eee;
   margin: 0.8rem 0;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s;
+  transition: color 0.3s; /* ホバー時の色変更をスムーズに */
 }
-
 nav a:hover { color: #000000; }
 
 /* =========================
    メイン部分
 ========================= */
 main {
-  margin-left: 240px;  /* PC用: サイドバー分 */
+  margin-left: 240px;  /* サイドバーの分だけ余白 */
   padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: calc(100% - 240px);
+  width: calc(100% - 240px); /* 残り幅 */
 }
 
-/* セクション共通 */
+/* 各セクション共通 */
 section {
   background: #fff;
   margin: 0 auto 2rem auto;
   padding: 1.5rem;
   border-radius: 12px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05); /* 優しい影 */
   max-width: 800px;
   width: 100%;
 }
@@ -92,6 +95,7 @@ section {
   color: #000000;
 }
 
+/* テキストと画像を横並び */
 .kikkake-content {
   display: flex;
   flex-direction: row;
@@ -100,9 +104,7 @@ section {
   width: 100%;
 }
 
-.kikkake-text {
-  flex: 1;
-}
+.kikkake-text { flex: 1; } /* テキスト領域は可能な限り幅を取る */
 
 .kikkake-content img {
   max-width: 100%;
@@ -122,6 +124,7 @@ section {
 .rules { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
 .terms, .skills { grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); }
 
+/* 個別カードスタイル */
 .rule, .term, .skill {
   background: #fff;
   border: 2px solid #b3e5fc;
@@ -130,7 +133,11 @@ section {
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
 }
 
-.rule h3, .term h3, .skill h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #007FFE; }
+.rule h3, .term h3, .skill h3 {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+  color: #007FFE;
+}
 
 /* =========================
    飛距離表
@@ -154,7 +161,12 @@ section {
   text-align: center;
 }
 
-.club-table th { background: #60B2FE; color: #fff; font-weight: bold; }
+.club-table th {
+  background: #60B2FE;
+  color: #fff;
+  font-weight: bold;
+}
+
 .club-table tr:nth-child(even) { background: #dceef5; }
 
 /* =========================
@@ -193,13 +205,13 @@ section {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
   transition: background-color 0.3s;
 }
-
 #backToTop:hover { background-color: #007FFE; }
 
 /* =========================
    レスポンシブ対応
 ========================= */
 @media (max-width: 768px) {
+  /* ナビを上部に変更 */
   nav {
     position: relative;
     width: 100%;
