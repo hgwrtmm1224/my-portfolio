@@ -1,34 +1,35 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja"><!-- お菓子教室レッスンページ -->
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応 -->
   <title>お菓子教室</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="backToTop.css">
-
+  <link rel="stylesheet" href="style.css"><!-- メインCSS -->
+  <link rel="stylesheet" href="backToTop.css"><!-- トップボタン用CSS -->
 </head>
+
 <body>
-  <header>
-   <header class="header-logo">
-  <img src="image/Sweet-removebg-preview.png" width="200px" alt="Sweet Smellsのロゴ">
-</header>
+  <!-- ヘッダー -->
+  <header class="header-logo">
+    <img src="image/Sweet-removebg-preview.png" width="200" alt="Sweet Smellsのロゴ"><!-- alt属性でアクセシビリティ対応 -->
+  </header>
 
-<nav class="header-nav">
-  <ul>
-    <li><a href="index.html">教室紹介</a></li>
-    <li><a href="lesson.html">レッスン</a></li>
-    <li><a href="contact.html">予約</a></li>
-  </ul>
-</nav>
+  <!-- ナビゲーション -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="index.html">教室紹介</a></li>
+      <li><a href="lesson.html">レッスン</a></li>
+      <li><a href="contact.html">予約</a></li>
+    </ul>
+  </nav>
 
-  <h2>レッスン</h2>
+  <h2>レッスン</h2><!-- ページ見出し -->
 
-
-  <!-- 2カラム：洋菓子 -->
+  <!-- 2カラム：洋菓子コース -->
   <section class="two-column">
     <div class="image">
-      <img src="image/名称未設定のデザイン (5).png" alt="案内イメージ">
+      <img src="image/名称未設定のデザイン (5).png" alt="洋菓子コース案内イメージ">
     </div>
     <div class="text">
       <h3>洋菓子コース</h3>
@@ -37,22 +38,22 @@
     </div>
   </section>
 
-  <!-- 2カラム：和菓子 -->
+  <!-- 2カラム：和菓子コース -->
   <section class="two-column">
     <div class="image">
-      <img src="image/名称未設定のデザイン (4).png" alt="案内イメージ">
+      <img src="image/名称未設定のデザイン (4).png" alt="和菓子コース案内イメージ">
     </div>
     <div class="text">
       <h3>和菓子コース</h3>
       毎週金曜日<br>
-      和菓子 : 1回5,000円<br>
+      1回：5,000円<br>
     </div>
   </section>
 
-<!-- 2カラム：流行り -->
+  <!-- 2カラム：流行りのお菓子コース -->
   <section class="two-column">
     <div class="image">
-      <img src="image/名称未設定のデザイン (7).png" alt="案内イメージ">
+      <img src="image/名称未設定のデザイン (7).png" alt="流行りのお菓子コース案内イメージ">
     </div>
     <div class="text">
       <h3>流行りのお菓子コース</h3>
@@ -74,15 +75,14 @@
     </div>
   </section>
 
-  
+  <!-- フッター -->
   <footer>
     <p>&copy; 2025 Sweet Smells</p>
   </footer>
-  <!-- ページトップボタン -->
-<button id="backToTop" title="トップへ戻る">↑</button>
 
-<!-- 外部JSを読み込む -->
-<script src="backToTop.js"></script>
+  <!-- ページトップボタン -->
+  <button id="backToTop" title="トップへ戻る">↑</button>
+  <script src="backToTop.js"></script><!-- ページトップボタン用JS -->
 
 </body>
 </html>

@@ -1,33 +1,31 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja"><!-- お菓子教室ページ -->
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応 -->
   <title>お菓子教室</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="backToTop.css">
-
+  <link rel="stylesheet" href="style.css"><!-- メインCSS -->
+  <link rel="stylesheet" href="backToTop.css"><!-- トップボタン用CSS -->
 </head>
+
 <body>
-  <header>
+  <!-- ヘッダー -->
+  <header class="header-logo">
+    <img src="image/Sweet-removebg-preview.png" width="200" alt="Sweet Smellsのロゴ"><!-- alt属性あり、アクセシビリティ良し -->
+  </header>
 
-<header class="header-logo">
-  <img src="image/Sweet-removebg-preview.png" width="200px" alt="Sweet Smellsのロゴ">
-</header>
+  <!-- ナビゲーション -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="#about">教室紹介</a></li>
+      <li><a href="lesson.html">レッスン</a></li>
+      <li><a href="contact.html">予約</a></li>
+      <!-- 内部リンクと別ページリンクを使い分け -->
+    </ul>
+  </nav>
 
-<nav class="header-nav">
-  <ul>
-    <li><a href="#about">教室紹介</a></li>
-    <li><a href="lesson.html">レッスン</a></li>
-    <li><a href="contact.html">予約</a></li>
-  </ul>
-</nav>
-
-   
-    
-
-  
-
+  <!-- 教室紹介セクション -->
   <section id="about">
     <h2>教室紹介</h2>
     <p>
@@ -41,29 +39,26 @@
     </p>
   </section>
 
-  
-
+  <!-- ギャラリーセクション -->
   <section id="gallery">
     <h2>ギャラリー</h2>
-    <img src= "image/image0.jpeg">
-    <img src= "image/image2.jpeg">
-    <img src= "image/image1.jpeg">
-    <img src= "image/image3.jpeg">
-    <img src= "image/vvinpsre.png">
-    <img src= "image/mbo8r0ne.png">
+    <!-- 画像はaltをつけるとアクセシビリティ向上 -->
+    <img src="image/image0.jpeg" alt="お菓子の写真1">
+    <img src="image/image2.jpeg" alt="お菓子の写真2">
+    <img src="image/image1.jpeg" alt="お菓子の写真3">
+    <img src="image/image3.jpeg" alt="お菓子の写真4">
+    <img src="image/vvinpsre.png" alt="お菓子の写真5">
+    <img src="image/mbo8r0ne.png" alt="お菓子の写真6">
   </section>
 
-  
-
+  <!-- フッター -->
   <footer>
     <p>&copy; 2025 Sweet Smells</p>
   </footer>
 
   <!-- ページトップボタン -->
-<button id="backToTop" title="トップへ戻る">↑</button>
-
-<!-- 外部JSを読み込む -->
-<script src="backToTop.js"></script>
+  <button id="backToTop" title="トップへ戻る">↑</button>
+  <script src="backToTop.js"></script><!-- ページトップボタン用JS -->
 
 </body>
 </html>

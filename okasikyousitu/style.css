@@ -1,21 +1,26 @@
-@charset "utf-8";
+@charset "utf-8"; /* 文字コード指定 */
 
+/* Google Fontsの読み込み */
 @import url('https://fonts.googleapis.com/css2?family=Dela+Gothic+One&family=M+PLUS+1:wght@100..900&family=M+PLUS+1p&family=Noto+Sans+JP:wght@100..900&family=Zen+Kurenaido&display=swap');
 
-
+/* ==============================
+   全体スタイル
+============================== */
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
+  font-family: 'Arial', sans-serif; /* フォント指定 */
+  line-height: 1.6;                 /* 行間 */
   margin: 0;
   padding: 0;
-  background-color: #fff0f6;
-  color: #333;
+  background-color: #fff0f6;        /* 背景色 */
+  color: #333;                      /* 文字色 */
 }
 
-/* ロゴ部分のヘッダー */
+/* ==============================
+   ヘッダー（ロゴ）部分
+============================== */
 .header-logo {
   position: relative;
-  background-image: url("image/名称未設定のデザイン (8).png");
+  background-image: url("image/名称未設定のデザイン (8).png"); /* 背景画像 */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -25,6 +30,7 @@ body {
   z-index: 1;
 }
 
+/* 背景の半透明オーバーレイ */
 .header-logo::before {
   content: "";
   position: absolute;
@@ -36,24 +42,25 @@ body {
   z-index: -1;
 }
 
-/* ナビゲーション部分 */
-
+/* ==============================
+   ナビゲーション
+============================== */
 .header-nav {
   background-color: #f8c8dc;
   padding: 20px;
   text-align: center;
-  font-family: 'Arial', sans-serif; /* ← 追加で統一 */
+  font-family: 'Arial', sans-serif; /* 統一フォント */
 }
 
 .header-nav ul {
   list-style: none;
   padding: 0;
   margin: 0;
-  color:#ffffff;
+  color: #ffffff;
 }
 
 .header-nav ul li {
-  display: inline-block;
+  display: inline-block;  /* 横並び */
   margin: 0 15px;
 }
 
@@ -61,27 +68,31 @@ body {
   text-decoration: none;
   color: #ffffff;
   font-weight: bold;
-  font-family: 'Arial', sans-serif; /* ← 追加で統一 */
 }
 
 .header-nav ul li a:hover {
   color: #ffffff;
-  text-decoration: underline wavy 2px;
+  text-decoration: underline wavy 2px; /* ホバー効果 */
 }
 
+/* ==============================
+   セクション
+============================== */
 section {
   padding: 40px 20px;
   max-width: 800px;
   margin: auto;
-   text-align: center;
+  text-align: center;
 }
 
+/* ギャラリー画像 */
 #gallery img {
   width: 200px;
   margin: 10px;
   border-radius: 10px;
 }
 
+/* フッター */
 footer {
   background-color: #f8c8dc;
   color: #fff;
@@ -89,43 +100,48 @@ footer {
   padding: 30px;
 }
 
-h2{
-   text-align: center;
-   font-size:30px;
+/* 見出し */
+h2 {
+  text-align: center;
+  font-size: 30px;
 }
 
-h3{
-  font-size:25px;
-  border-bottom:3px solid #d838bb;
-  margin-bottom:20px;
-  letter-spacing:10px;
-  
+h3 {
+  font-size: 25px;
+  border-bottom: 3px solid #d838bb;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
 }
 
-form{
+/* ==============================
+   フォーム
+============================== */
+form {
   text-align: center;
 }
 
-
-    #result {
-      max-width: 500px;
-      margin: 30px auto;
-      padding: 20px;
-      background-color: #fceffc;
-      border: 1px solid #fca1f7;
-      border-radius: 10px;
-      display: none;
-    }
-
-h4{
-  text-align:center;
+/* 予約フォームの結果表示 */
+#result {
+  max-width: 500px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fceffc;
+  border: 1px solid #fca1f7;
+  border-radius: 10px;
+  display: none; /* 初期は非表示 */
 }
 
-.wavy-link{
+h4 {
+  text-align: center;
+}
+
+.wavy-link {
   text-decoration: underline wavy #ffffff;
 }
 
-/* 2カラムレイアウト */
+/* ==============================
+   2カラムレイアウト（レッスン等）
+============================== */
 .two-column {
   display: flex;
   align-items: center;
@@ -149,7 +165,7 @@ h4{
   flex: 1;
 }
 
-/* スマホ対応 */
+/* スマホ対応：縦並び */
 @media (max-width: 768px) {
   .two-column {
     flex-direction: column;
@@ -157,44 +173,46 @@ h4{
   }
 }
 
-/* ページトップボタン */
+/* ==============================
+   ページトップボタン
+============================== */
 #backToTop {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    z-index: 100;
-    background-color: #f99be6;
-    color: white;
-    border: none;
-    outline: none;
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    cursor: pointer;
-    font-size: 24px;
-    display: block;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-    transition: transform 0.3s, background-color 0.3s;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #f99be6;
+  color: white;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, background-color 0.3s;
 }
 
 #backToTop:hover {
-    background-color: #fb54da;
-    transform: scale(1.1);
+  background-color: #fb54da;
+  transform: scale(1.1);
 }
 
-/* 小さい画面用 */
+/* 小さい画面用調整 */
 @media (max-width: 480px) {
-    #backToTop {
-        width: 45px;
-        height: 45px;
-        font-size: 20px;
-        bottom: 15px;
-        right: 15px;
-    }
+  #backToTop {
+    width: 45px;
+    height: 45px;
+    font-size: 20px;
+    bottom: 15px;
+    right: 15px;
+  }
 }
 
 /* ==============================
-   予約フォーム：統一デザイン
+   予約フォーム統一デザイン
 ============================== */
 #reservationForm {
   max-width: 600px;
@@ -225,8 +243,7 @@ h4{
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
-  font-family: 'Arial', sans-serif;
-  background-color: #ffffff; /* ← 背景白に変更 */
+  background-color: #ffffff;
 }
 
 /* 高さ・縦中央調整 */
@@ -235,7 +252,7 @@ h4{
 #reservationForm input[type="date"],
 #reservationForm select {
   height: 40px;
-  line-height: 40px; /* 文字の縦中央 */
+  line-height: 40px;
 }
 
 #reservationForm textarea {
@@ -269,15 +286,13 @@ h4{
 }
 
 /* ==============================
-   スマホ対応
+   レスポンシブ調整：768px以下
 ============================== */
 @media (max-width: 768px) {
   #reservationForm {
     padding: 15px;
   }
-  #reservationForm input[type="text"],
-  #reservationForm input[type="email"],
-  #reservationForm input[type="date"],
+  #reservationForm input,
   #reservationForm select {
     height: 38px;
     font-size: 15px;
@@ -292,42 +307,22 @@ h4{
   }
 }
 
+/* ==============================
+   レスポンシブ調整：480px以下
+============================== */
 @media (max-width: 480px) {
   #reservationForm {
     padding: 10px;
   }
-  #reservationForm input[type="text"],
-  #reservationForm input[type="email"],
-  #reservationForm input[type="date"],
+  #reservationForm input,
   #reservationForm select {
     height: 36px;
     font-size: 14px;
     line-height: 36px;
   }
   #reservationForm textarea {
-    min-height: 80px;
-    font-size: 14px;
-  }
-  #reservationForm input[type="submit"] {
-    font-size: 14px;
-  }
-}
-
-
-@media (max-width: 480px) {
-  #reservationForm {
-    padding: 10px;
-  }
-  #reservationForm input[type="text"],
-  #reservationForm input[type="email"],
-  #reservationForm input[type="date"],
-  #reservationForm select,
-  #reservationForm textarea {
-    font-size: 14px;
-    height: 36px;
-  }
-  #reservationForm textarea {
     height: 80px;
+    font-size: 14px;
   }
   #reservationForm input[type="submit"] {
     font-size: 14px;
