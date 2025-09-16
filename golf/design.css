@@ -3,18 +3,19 @@
 /* =========================
    全体設定
 ========================= */
-body {
-  font-family: 'M PLUS Rounded 1c', sans-serif;
-  background: #F0FFFE;
-  color: #333;
-  margin: 0;
-  overflow-y: scroll; /* 横ズレ防止 */
-  box-sizing: border-box;
-}
-
 html, body {
   max-width: 100%;
   overflow-x: hidden; /* 横スクロール禁止 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'M PLUS Rounded 1c', sans-serif;
+  background: #F0FFFE;
+  color: #333;
+}
+
+*, *::before, *::after {
+  box-sizing: inherit;
 }
 
 /* =========================
@@ -63,7 +64,6 @@ main {
   flex-direction: column;
   align-items: center;
   width: calc(100% - 240px);
-  box-sizing: border-box;
 }
 
 /* セクション共通 */
@@ -82,7 +82,7 @@ section {
 ========================= */
 .kikkake-section {
   display: flex;
-  flex-direction: column; /* h2は上、内容は下 */
+  flex-direction: column;
   gap: 10px;
   margin-bottom: 2rem;
 }
@@ -92,21 +92,22 @@ section {
   color: #000000;
 }
 
-/* h2下のテキスト＋画像を横並びにするラッパー */
 .kikkake-content {
   display: flex;
-  flex-direction: row; /* PCは横並び */
+  flex-direction: row;
   align-items: flex-start;
   gap: 20px;
+  width: 100%;
 }
 
 .kikkake-text {
-  flex: 1;       /* テキスト部分は横幅いっぱい */
+  flex: 1;
 }
 
 .kikkake-content img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
+  display: block;
 }
 
 /* =========================
@@ -127,7 +128,6 @@ section {
   padding: 1rem;
   border-radius: 12px;
   box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
 }
 
 .rule h3, .term h3, .skill h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #007FFE; }
@@ -216,34 +216,27 @@ section {
   nav a { margin: 0 0.5rem; font-size: 16px; }
 
   main {
-    margin: 0;        /* 左右余白をなくす */
+    margin: 0;
     width: 100%;
     padding: 1rem;
-    box-sizing: border-box;
   }
 
   section { 
     padding: 1rem; 
     margin-bottom: 1rem; 
-    max-width: 100%; /* 幅いっぱいに広げる */
+    max-width: 100%;
   }
 
-  /* きっかけセクション */
   .kikkake-content {
-    flex-direction: column; /* スマホは縦並び */
+    flex-direction: column;
     align-items: center;
     text-align: center;
+    width: 100%;
+    padding: 0 1rem;
   }
 
-  .kikkake-content img {
-    max-width: 90%;
-    margin-top: 1rem;
-  }
-
-  /* skills画像 */
   #skills img { max-width: 90%; height: auto; margin: 1rem auto; display: block; }
 
-  /* スコア記録タイトル画像 */
   .title-box { align-items: center; text-align: center; }
   .title-box img { max-width: 120px; margin: 0 auto; }
 }
@@ -255,4 +248,13 @@ section {
   .club-table th, .club-table td { padding: 0.5rem; font-size: 0.85rem; }
 
   #backToTop { width: 45px; height: 45px; font-size: 20px; bottom: 15px; right: 15px; }
+}
+
+/* =========================
+   画像共通調整
+========================= */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
