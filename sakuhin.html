@@ -1,31 +1,36 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="ja"><!-- ポートフォリオ作品集ページ -->
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="design.css" type="text/css">
-    <link rel="stylesheet" href="backToTop.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応 -->
+    <link rel="stylesheet" href="design.css" type="text/css"><!-- メインCSS -->
+    <link rel="stylesheet" href="backToTop.css"><!-- トップボタン用CSS -->
 
     <title>プロフィール | シンプルなウェブサイト</title>
 </head>
 
 <body>
 
+    <!-- ヘッダー：ロゴ -->
     <header class="header">
-        <img src="images/Portfolio-logo.png" width="150" height="150" alt="Portfolio">
+        <img src="images/Portfolio-logo.png" width="150" height="150" alt="Portfolio"><!-- alt属性あり -->
     </header>
 
+    <!-- ナビゲーション -->
     <nav class="nav">
         <a href="index.html">ホーム</a>
         <a href="sakuhin.html">作品集</a>
         <a href="contact.html">お問い合わせ</a>
+        <!-- ナビゲーションはリンクの数が少ないのでシンプルでOK -->
     </nav>
 
+    <!-- メインコンテンツ -->
     <div class="container">
         <section class="main-content">
             <h2>作品集</h2>
 
+            <!-- テーブル：制作物一覧 -->
             <div class="table-container">
                 <table>
                     <tr>
@@ -38,7 +43,7 @@
                         <td>当該ポートフォリオ</td>
                         <td>2日間</td>
                         <td>HTML, CSS, Canva, GoogleFont, ChatGPT</td>
-                        <td></td>
+                        <td><!-- リンクなしの場合空白でOK --></td>
                     </tr>
                     <tr>
                         <td>お菓子教室</td>
@@ -55,6 +60,7 @@
                 </table>
             </div>
 
+            <!-- 制作理由の説明 -->
             <p>
                 お菓子教室を作成した理由<br>
                 →将来、自宅で教室を開きたいと考えているので、現時点でどのくらい作成できるのか<br>
@@ -67,12 +73,10 @@
             </p>
         </section>
     </div>
+
     <!-- ページトップボタン -->
-        <button id="backToTop" title="トップへ戻る">↑</button>
-
-    <!-- 外部JSを読み込む -->
-        <script src="backToTop.js"></script>
-
+    <button id="backToTop" title="トップへ戻る">↑</button>
+    <script src="backToTop.js"></script><!-- ページトップ用JS -->
 
 </body>
 </html>
