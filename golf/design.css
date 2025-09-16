@@ -12,6 +12,11 @@ body {
   box-sizing: border-box;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden; /* 横スクロール禁止 */
+}
+
 /* =========================
    サイドナビゲーション
 ========================= */
@@ -125,7 +130,6 @@ section {
   transition: transform 0.2s;
 }
 
-
 .rule h3, .term h3, .skill h3 { font-size: 1.1rem; margin-bottom: 0.5rem; color: #007FFE; }
 
 /* =========================
@@ -169,6 +173,30 @@ section {
 .title-box img { max-width: 150px; height: auto; display: block; }
 
 /* =========================
+   ページトップボタン
+========================= */
+#backToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+  background-color: #6bc9ff;
+  color: white;
+  border: none;
+  outline: none;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 24px;
+  display: block;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  transition: background-color 0.3s;
+}
+
+#backToTop:hover { background-color: #007FFE; }
+
+/* =========================
    レスポンシブ対応
 ========================= */
 @media (max-width: 768px) {
@@ -179,7 +207,8 @@ section {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem;
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
     box-shadow: none;
   }
 
@@ -187,14 +216,17 @@ section {
   nav a { margin: 0 0.5rem; font-size: 16px; }
 
   main {
-    margin-left: 0;      /* 左余白解除 */
+    margin: 0;        /* 左右余白をなくす */
     width: 100%;
     padding: 1rem;
     box-sizing: border-box;
-    margin: 0 auto;      /* 中央揃え */
   }
 
-  section { padding: 1rem; margin-bottom: 1rem; }
+  section { 
+    padding: 1rem; 
+    margin-bottom: 1rem; 
+    max-width: 100%; /* 幅いっぱいに広げる */
+  }
 
   /* きっかけセクション */
   .kikkake-content {
@@ -223,34 +255,4 @@ section {
   .club-table th, .club-table td { padding: 0.5rem; font-size: 0.85rem; }
 
   #backToTop { width: 45px; height: 45px; font-size: 20px; bottom: 15px; right: 15px; }
-}
-
-/* =========================
-   ページトップボタン
-========================= */
-#backToTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-  background-color: #6bc9ff;
-  color: white;
-  border: none;
-  outline: none;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  cursor: pointer;
-  font-size: 24px;
-  display: block;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  transition: background-color 0.3s;
-}
-
-/* 背景色だけ変わる（scale削除済み） */
-#backToTop:hover { background-color: #007FFE; }
-
-html, body {
-  max-width: 100%;
-  overflow-x: hidden; /* 横スクロール禁止 */
 }
