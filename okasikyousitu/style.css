@@ -194,7 +194,7 @@ h4{
 }
 
 /* ==============================
-   予約フォーム：レスポンシブ対応
+   予約フォーム：統一デザイン
 ============================== */
 #reservationForm {
   max-width: 600px;
@@ -213,32 +213,34 @@ h4{
   font-weight: bold;
 }
 
+/* 入力欄共通 */
 #reservationForm input[type="text"],
 #reservationForm input[type="email"],
 #reservationForm input[type="date"],
-#reservationForm select {
+#reservationForm select,
+#reservationForm textarea {
   width: 100%;
-  height: 40px;
   padding: 0 10px;
   border: 1px solid #ed29ff;
   border-radius: 5px;
   box-sizing: border-box;
   font-size: 16px;
+  font-family: 'Arial', sans-serif;
+}
 
-  /* 文字縦中央 */
-  display: flex;
-  align-items: center;
+/* 高さ・縦中央調整 */
+#reservationForm input[type="text"],
+#reservationForm input[type="email"],
+#reservationForm input[type="date"],
+#reservationForm select {
+  height: 40px;
+  line-height: 40px; /* 文字の縦中央 */
 }
 
 #reservationForm textarea {
-  width: 100%;
+  min-height: 100px;
   padding: 10px;
-  height: 100px;
-  border: 1px solid #ed29ff;
-  border-radius: 5px;
-  box-sizing: border-box;
-  font-size: 16px;
-  line-height: 1.5; /* テキストの縦位置 */
+  line-height: 1.5;
   resize: vertical;
 }
 
@@ -265,7 +267,9 @@ h4{
   margin: 5px 0 10px 0;
 }
 
-/* スマホ対応 */
+/* ==============================
+   スマホ対応
+============================== */
 @media (max-width: 768px) {
   #reservationForm {
     padding: 15px;
@@ -273,18 +277,41 @@ h4{
   #reservationForm input[type="text"],
   #reservationForm input[type="email"],
   #reservationForm input[type="date"],
-  #reservationForm select,
-  #reservationForm textarea {
-    font-size: 15px;
+  #reservationForm select {
     height: 38px;
+    font-size: 15px;
+    line-height: 38px;
   }
   #reservationForm textarea {
-    height: 90px;
+    min-height: 90px;
+    font-size: 15px;
   }
   #reservationForm input[type="submit"] {
     font-size: 15px;
   }
 }
+
+@media (max-width: 480px) {
+  #reservationForm {
+    padding: 10px;
+  }
+  #reservationForm input[type="text"],
+  #reservationForm input[type="email"],
+  #reservationForm input[type="date"],
+  #reservationForm select {
+    height: 36px;
+    font-size: 14px;
+    line-height: 36px;
+  }
+  #reservationForm textarea {
+    min-height: 80px;
+    font-size: 14px;
+  }
+  #reservationForm input[type="submit"] {
+    font-size: 14px;
+  }
+}
+
 
 @media (max-width: 480px) {
   #reservationForm {
