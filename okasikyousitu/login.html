@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <!-- お菓子教室ページ -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応 -->
+  <title>お菓子教室</title>
+  <link rel="stylesheet" href="style.css"><!-- メインCSS -->
+  <link rel="stylesheet" href="backToTop.css"><!-- トップボタン用CSS -->
+</head>
+
+<body>
+  <!-- ヘッダー -->
+  <header class="header-logo">
+    <img src="image/Sweet-removebg-preview.png" width="200" alt="Sweet Smellsのロゴ"><!-- alt属性あり、アクセシビリティ良し -->
+  </header>
+
+ <!-- ナビゲーション -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="index.html">教室紹介</a></li>
+      <li><a href="lesson.html">レッスン</a></li>
+      <li><a href="login.html">予約</a></li>
+    </ul>
+  </nav>
+
+
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ログイン - お菓子教室</title>
+  <link rel="stylesheet" href="contact.css">
+  <script type="module" src="login.js" defer></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応 -->
+  <link rel="stylesheet" href="backToTop.css"><!-- トップボタン用CSS -->
+
+</head>
+
+
+<body>
+  <main class="centered">
+    <h1>ログイン</h1>
+
+    <input type="email" id="email" placeholder="メールアドレス">
+    <input type="password" id="password" placeholder="パスワード">
+
+    <div class="auth-buttons">
+      <button id="signup-btn">新規登録</button>
+      <button id="login-btn">ログイン</button>
+    </div>
+
+    <p id="auth-message"></p>
+  </main>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 Sweet Smells</p>
+  </footer>
+
+  <!-- ページトップボタン -->
+  <button id="backToTop" title="トップへ戻る">↑</button>
+  <script src="backToTop.js"></script><!-- ページトップボタン用JS -->
+
+</body>
+</html>

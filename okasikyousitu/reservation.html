@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"><!-- レスポンシブ対応 -->
+  <title>お菓子教室</title>
+  <link rel="stylesheet" href="style.css"><!-- メインCSS -->
+  <link rel="stylesheet" href="backToTop.css"><!-- トップボタン用CSS -->
+</head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="reservation.css">
+  <script type="module" src="reservation.js" defer>
+  </script>
+</head>
+<body>
+  <!-- ヘッダー -->
+  <header class="header-logo">
+    <img src="image/Sweet-removebg-preview.png" width="200" alt="Sweet Smellsのロゴ"><!-- alt属性あり、アクセシビリティ良し -->
+  </header>
+
+  <!-- ナビゲーション -->
+  <nav class="header-nav">
+    <ul>
+      <li><a href="index.html">教室紹介</a></li>
+      <li><a href="lesson.html">レッスン</a></li>
+      <li><a href="login.html">予約</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- 🔒 ログイン確認エリア -->
+    <section id="login-check">
+      <p id="loading">ログイン情報を取得中です…</p>
+    </section>
+
+    <!-- 📅 予約フォーム -->
+    <section id="reservation-section" class="hidden">
+      <h2>予約フォーム</h2>
+      <form id="reservationForm">
+        <label>希望日：
+          <input type="date" id="date" required>
+        </label>
+        <label>名前：
+          <input type="text" id="name" required>
+        </label>
+        <label>時間：
+          <input type="time" id="time" required>
+        </label>
+        <label>コース名：
+          <select id="course" required>
+            <option value="">選択してください</option>
+            <option value="洋菓子">洋菓子</option>
+            <option value="和菓子">和菓子</option>
+            <option value="流行りのケーキ">流行りのケーキ</option>
+          </select>
+        </label>
+        <label>備考（アレルギーなど）：
+          <textarea id="note" rows="3" placeholder="例：卵アレルギーがあります"></textarea>
+        </label>
+        <button type="submit">予約する</button>
+      </form>
+
+      <p id="reserve-message"></p>
+
+      <!-- 🔎 予約一覧 -->
+      <h3>あなたの予約一覧</h3>
+      <ul id="reservationList"></ul>
+
+      <!-- 👇 予約一覧の下にログアウトボタン配置 -->
+      <div class="logout-container">
+        <button id="logout-btn" class="logout-bottom">ログアウト</button>
+      </div>
+    </section>
+  </main>
+
+<!-- 💖 編集モーダル -->
+<div id="editModal" class="modal hidden">
+  <div class="modal-content">
+    <h3>📅 予約内容を編集</h3>
+    <form id="editForm">
+      <label>名前：</label>
+      <input type="text" id="editName" required>
+
+      <label>希望日：</label>
+      <input type="date" id="editDate" required>
+
+      <label>時間：</label>
+      <input type="time" id="editTime" required>
+
+      <label>コース名：</label>
+      <select id="editCourse" required>
+        <option value="洋菓子">洋菓子</option>
+        <option value="和菓子">和菓子</option>
+        <option value="流行りのケーキ">流行りのケーキ</option>
+      </select>
+
+      <label>備考：</label>
+      <textarea id="editNote" rows="3"></textarea>
+
+      <div class="modal-buttons">
+        <button type="button" id="cancelEdit" class="button-common cancel-btn">キャンセル</button>
+        <button type="submit" class="button-common save-btn">保存する</button>
+      </div>
+    </form>
+  </div>
+</div>
+
+  <!-- 🎀 カスタムポップアップ -->
+  <div id="toast" class="toast hidden">保存が完了しました💐</div>
+
+  <!-- 🔼 ページトップボタン -->
+  <button id="backToTop" class="back-to-top">↑</button>
+
+  <!-- フッター -->
+  <footer>
+    <p>&copy; 2025 Sweet Smells</p>
+  </footer>
+
+
+</body>
+</html>

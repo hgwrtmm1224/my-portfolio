@@ -1,0 +1,258 @@
+@charset "UTF-8";
+
+/* 🌸 全体の基本設定 */
+body {
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #fff6f8;
+  color: #444;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* 🩷 ヘッダー */
+.header-logo {
+  background-color: #ffe6ed;
+  padding: 20px 0;
+  box-shadow: 0 2px 5px rgba(255, 192, 203, 0.3);
+}
+
+.header-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background: #ffd6e5;
+  display: flex;
+  justify-content: center;
+}
+
+.header-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 12px 18px;
+  display: block;
+  font-weight: 600;
+}
+
+.header-nav a:hover {
+  background: #ffb6c1;
+  border-radius: 8px;
+}
+
+/* 📅 予約フォームセクション */
+#reservation-section {
+  max-width: 600px;
+  margin: 40px auto 80px;
+  padding: 30px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 10px rgba(255, 192, 203, 0.3);
+}
+
+/* 上の余白を少なく・下に余裕をもたせる */
+#reservation-section h2 {
+  margin-top: 0;
+  margin-bottom: 20px;
+  color: #ff5c8d;
+}
+
+#reservationForm label {
+  display: block;
+  text-align: left;
+  margin: 10px 0;
+  font-weight: bold;
+  color: #555;
+}
+
+#reservationForm input,
+#reservationForm select,
+#reservationForm textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ffc0cb;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+/* 🌷 予約ボタン＆ログアウトボタン共通 */
+button {
+  background: #ffb6c1;
+  border: none;
+  border-radius: 25px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 10px 25px;
+  cursor: pointer;
+  margin-top: 20px;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background: #ff5c8d;
+  transform: scale(1.05);
+}
+
+/* 📋 予約一覧 */
+#reservationList {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+#reservationList li {
+  background: #fff0f5;
+  border-radius: 15px;
+  padding: 15px;
+  margin-bottom: 10px;
+  text-align: left;
+  box-shadow: 0 2px 6px rgba(255, 192, 203, 0.2);
+}
+
+.reservation-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.edit-btn, .delete-btn {
+  background: #ffb6c1;
+  border: none;
+  border-radius: 15px;
+  padding: 6px 12px;
+  font-size: 14px;
+  cursor: pointer;
+  color: #fff;
+  transition: all 0.3s;
+}
+
+.edit-btn:hover {
+  background: #ff80a6;
+}
+
+.delete-btn {
+  background: #ff8fa3;
+}
+
+.delete-btn:hover {
+  background: #ff4d6d;
+}
+
+/* 🌸 モーダル */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 192, 203, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff;
+  padding: 25px;
+  border-radius: 20px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+}
+
+.modal-content h3 {
+  margin-top: 0;
+  color: #ff5c8d;
+}
+
+.modal-content label {
+  display: block;
+  margin: 10px 0 5px;
+  text-align: left;
+  color: #555;
+}
+
+.modal-content input,
+.modal-content select,
+.modal-content textarea {
+  width: 100%;
+  padding: 8px;
+  border: 1px solid #ffc0cb;
+  border-radius: 8px;
+}
+
+/* 🌼 モーダル内ボタン */
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button-common {
+  flex: 1;
+  margin: 0 5px;
+  border-radius: 20px;
+}
+
+.save-btn {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+.cancel-btn {
+  background: #ffd6e5;
+  color: #444;
+}
+
+.cancel-btn:hover {
+  background: #ffb6c1;
+  color: #fff;
+}
+
+/* 💗 ログアウトボタン（予約一覧の下） */
+.logout-container {
+  text-align: center;
+  margin-top: 40px;
+}
+
+.logout-bottom {
+  background: #ffb6c1;
+  color: #fff;
+  width: 100%;
+  max-width: 250px;
+}
+
+/* 🎀 トースト（ポップアップ通知） */
+.toast {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #ffb6c1;
+  color: #fff;
+  padding: 12px 24px;
+  border-radius: 20px;
+  box-shadow: 0 3px 10px rgba(255, 105, 180, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+/* 🩷 フッター */
+footer {
+  background: #ffd6e5;
+  color: #555;
+  padding: 15px 0;
+  margin-top: 50px;
+}

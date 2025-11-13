@@ -1,0 +1,243 @@
+@charset "utf-8";
+
+/* ------------------------------
+  全体デザイン
+------------------------------ */
+body {
+  margin: 0;
+  font-family: 'Noto Sans JP', sans-serif;
+  background: #fffaf8;
+  color: #333;
+}
+
+header {
+  background: #f4c2c2;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+/* ------------------------------
+  フォームデザイン
+------------------------------ */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+}
+
+input, select, textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #e0c6c6;
+  border-radius: 8px;
+  font-size: 14px;
+  background: #fff5f7;
+}
+
+input:focus, select:focus, textarea:focus {
+  outline: none;
+  border-color: #f48fb1;
+  box-shadow: 0 0 5px rgba(244, 143, 177, 0.4);
+}
+
+/* ------------------------------
+  ボタンデザイン（統一）
+------------------------------ */
+button {
+  padding: 10px 14px;
+  font-size: 15px;
+  border: none;
+  border-radius: 25px; /* まるっとかわいく */
+  cursor: pointer;
+  background-color: #f48fb1;
+  color: #fff;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #f06292;
+  transform: translateY(-2px);
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
+
+/* ------------------------------
+  予約一覧
+------------------------------ */
+#reservationList {
+  list-style: none;
+  padding: 0;
+}
+
+#reservationList li {
+  background: #fff0f3;
+  margin: 10px 0;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reservationList button {
+  background: #f48fb1;
+  font-size: 13px;
+  padding: 6px 12px;
+  border-radius: 20px;
+}
+
+#reservationList button:hover {
+  background: #f06292;
+}
+
+/* ------------------------------
+  モーダル
+------------------------------ */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+.modal-content {
+  background: #fff5f7;
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-content h3 {
+  text-align: center;
+  color: #f48fb1;
+  margin-bottom: 15px;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+.modal-buttons button {
+  border-radius: 25px;
+  background-color: #f48fb1;
+  color: #fff;
+  padding: 8px 16px;
+}
+
+.modal-buttons #cancelEdit {
+  background-color: #f0c6c6;
+  color: #8b4a56;
+}
+
+.modal-buttons #cancelEdit:hover {
+  background-color: #e0a6a6;
+}
+
+/* ------------------------------
+  トースト通知（シンプルかわいい）
+------------------------------ */
+.toast {
+  position: fixed;
+  bottom: 40px;
+  right: 40px;
+  background: #ffe6eb;
+  color: #8b4a56;
+  padding: 14px 26px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(255, 182, 193, 0.4);
+  opacity: 0;
+  transform: translateY(20px) scale(0.95);
+  transition: all 0.4s ease;
+  z-index: 9999;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: softPop 0.5s ease forwards;
+}
+
+@keyframes softPop {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ------------------------------
+  トップへ戻るボタン
+------------------------------ */
+.back-to-top {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #f48fb1;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 20px;
+  cursor: pointer;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.2);
+  display: none;
+}
+
+.back-to-top:hover {
+  background-color: #f06292;
+}
+
+/* ===============================
+   入力欄・ボタン幅統一
+=============================== */
+form input,
+form select,
+form textarea,
+form button {
+  width: 100%;
+  box-sizing: border-box;
+}
